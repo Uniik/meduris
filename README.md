@@ -17,9 +17,9 @@ Conversion notes:
 ----->
 
 
-Assim Amenas
+#Assim Amenas
 
-TP1 - Développement graphique 420-P45-BB
+#TP1 - Développement graphique 420-P45-BB
 
 **Analyse du jeu Meduris**
 
@@ -70,7 +70,7 @@ trois possibilités, au hasard:
 2. produire les matières premières
     1. les deux ouvriers produisent des matières première selon leur emplacement sur la carte et selon leur position en hauteur par rapport avec les autres ouvriers sur le même emplacement(1 matière première de l'élément correspondant +1 pour chaques ouvriers en dessous.)
 
-**Construire une hutte:**
+# Construire une hutte:
 
 
 
