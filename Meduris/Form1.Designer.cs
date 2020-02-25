@@ -62,7 +62,7 @@ namespace Meduris
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(1090, 87);
+            this.panel2.Location = new System.Drawing.Point(1077, 87);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(765, 310);
             this.panel2.TabIndex = 1;
