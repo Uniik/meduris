@@ -16,5 +16,10 @@ namespace Meduris
         {
             InitializeComponent();
         }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -8,3 +8,13 @@ C:\Users\1769249\source\repos\Meduris\obj\Debug\Meduris.csproj.GenerateResource.
 C:\Users\1769249\source\repos\Meduris\obj\Debug\Meduris.csproj.CoreCompileInputs.cache
 C:\Users\1769249\source\repos\Meduris\obj\Debug\Meduris.exe
 C:\Users\1769249\source\repos\Meduris\obj\Debug\Meduris.pdb
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\bin\Debug\Meduris.exe.config
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\bin\Debug\Meduris.exe
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\bin\Debug\Meduris.pdb
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\obj\Debug\Meduris.csprojAssemblyReference.cache
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\obj\Debug\Meduris.Form1.resources
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\obj\Debug\Meduris.Properties.Resources.resources
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\obj\Debug\Meduris.csproj.GenerateResource.cache
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\obj\Debug\Meduris.csproj.CoreCompileInputs.cache
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\obj\Debug\Meduris.exe
+C:\Users\1769249\Documents\gitCSharpe\meduris\Meduris\obj\Debug\Meduris.pdb
