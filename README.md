@@ -1,35 +1,14 @@
-# meduris
-<!----- Conversion time: 0.815 seconds.
+<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 1.</p>
+<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
+
+<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
+
+<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
 
 
-Using this Markdown file:
-
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β18
-* Tue Feb 25 2020 15:05:57 GMT-0800 (PST)
-* Source doc: https://docs.google.com/open?id=11FfE0toIJVP86TRbbosdtsKPMRYWcBPf2Hh3deR7QzY
------>
-
-
-# Assim Amenas
-
-# TP1 - Développement graphique 420-P45-BB
+Assim Amenas
 
 **Analyse du jeu Meduris**
-
-Travail présenté à
-
-Monsieur Raouf Babari
-
-Collège de Bois-de-Boulogne
-
-23 Février 2020
 
 <span style="text-decoration:underline;">Début de partie</span>
 
@@ -70,7 +49,7 @@ trois possibilités, au hasard:
 2. produire les matières premières
     1. les deux ouvriers produisent des matières première selon leur emplacement sur la carte et selon leur position en hauteur par rapport avec les autres ouvriers sur le même emplacement(1 matière première de l'élément correspondant +1 pour chaques ouvriers en dessous.)
 
-# Construire une hutte:
+**Construire une hutte:**
 
 
 
@@ -122,4 +101,25 @@ trois possibilités, au hasard:
 4. Les joueurs reçoivent _n(n+1)/2 _points de victoire, où n correspond au nombre de runes possédées
 5. Le joueur qui a le plus de points de victoire remporte la partie ! En cas d’égalité, le joueur qui a construit le plus de huttes et temples ressort gagnant. S’il y a également égalité, celui à qui il reste le plus de matières premières est le gagnant. S’il y a encore égalité, c’est égalité!
 
-<!-- Docs to Markdown version 1.0β18 -->
+    **Rendu de l’interface:**
+
+
+
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Analysie-TP10.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![alt_text](images/Analysie-TP10.png "image_tooltip")
+
+
+**<span style="text-decoration:underline;">Classes nécessaires:</span>**
+
+
+
+1. Joueur
+2. ouvrier
+3. druide
+4. rune
+5. colonie
+6. gameTop
+7. gameEvent
