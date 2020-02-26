@@ -84,6 +84,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Ressource\background.png" />
+    <None Include="Ressource\BoisICO.png" />
+    <None Include="Ressource\CuivreICO.png" />
     <Content Include="Ressource\druide_large.gif" />
     <Content Include="Ressource\druide_normal.gif" />
     <Content Include="Ressource\hutte_bleu.gif" />
@@ -92,12 +94,14 @@
     <Content Include="Ressource\hutte_turquoise.gif" />
     <Content Include="Ressource\hutte_vert.gif" />
     <Content Include="Ressource\hutte_violet.gif" />
+    <None Include="Ressource\laineICO.png" />
     <Content Include="Ressource\meeple_bleu.gif" />
     <Content Include="Ressource\meeple_jaune.gif" />
     <Content Include="Ressource\meeple_rouge.gif" />
     <Content Include="Ressource\meeple_turquoise.gif" />
     <Content Include="Ressource\meeple_vert.gif" />
     <Content Include="Ressource\meeple_violet.gif" />
+    <None Include="Ressource\PierreICO.png" />
     <Content Include="Ressource\Planche-3joueurs-Large.jpg" />
     <Content Include="Ressource\Planche-3joueurs-Normal.jpg" />
     <Content Include="Ressource\rune_boite.gif" />
