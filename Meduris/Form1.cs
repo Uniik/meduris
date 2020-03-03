@@ -14,6 +14,7 @@ namespace Meduris
     {
         private Bitmap bmp;
         private Graphics gr;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +26,28 @@ namespace Meduris
         }
 
         private void Panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            var endWidth = 300;
+            var endHeight = 300;
+
+            var scaleFactor = 3; //perhaps get this value from a const, or an on screen slider
+
+            var startWidth = endWidth / scaleFactor;
+            var startHeight = endHeight / scaleFactor;
+
+            bmp = new Bitmap(startWidth, startHeight);
+
+            gr = this.CreateGraphics();
+            gr = Graphics.FromImage(bmp);
+
+            var xPos = Math.Max(0, MousePosition.X - (startWidth / 2)); // divide by two in order to center
+            var yPos = Math.Max(0, MousePosition.Y - (startHeight / 2));
+
+            gr.CopyFromScreen(xPos, yPos, 0, 0, new Size(endWidth, endWidth));
+            panel5.BackgroundImage = bmp;
+        }
+
+        public void scope()
         {
             var endWidth = 300;
             var endHeight = 300;
