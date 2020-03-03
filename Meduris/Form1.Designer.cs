@@ -89,7 +89,7 @@ namespace Meduris
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            Form1.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -837,12 +837,12 @@ namespace Meduris
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(0, 825);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(220, 220);
-            this.panel5.TabIndex = 19;
+            Form1.panel5.BackColor = System.Drawing.Color.White;
+            Form1.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Form1.panel5.Location = new System.Drawing.Point(0, 825);
+            Form1.panel5.Name = "panel5";
+            Form1.panel5.Size = new System.Drawing.Size(220, 220);
+            Form1.panel5.TabIndex = 19;
             // 
             // Form1
             // 
@@ -851,7 +851,7 @@ namespace Meduris
             this.BackgroundImage = global::Meduris.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(Form1.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -953,7 +953,7 @@ namespace Meduris
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Panel panel5;
+        public static System.Windows.Forms.Panel panel5;
     }
 }
 
