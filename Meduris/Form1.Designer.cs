@@ -31,8 +31,8 @@ namespace Meduris
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.plateau = new System.Windows.Forms.Panel();
+            this.p1Panel = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace Meduris
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.p2Panel = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label15 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@ namespace Meduris
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.p3Panel = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label24 = new System.Windows.Forms.Label();
@@ -90,8 +90,8 @@ namespace Meduris
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
+            this.scopePanel = new System.Windows.Forms.Panel();
+            this.p1Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -99,7 +99,7 @@ namespace Meduris
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.p2Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -107,7 +107,7 @@ namespace Meduris
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.p3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -117,38 +117,39 @@ namespace Meduris
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // plateau
             // 
-            this.panel1.BackgroundImage = global::Meduris.Properties.Resources.Planche_3joueurs_Large;
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Name = "panel1";
+            this.plateau.BackgroundImage = global::Meduris.Properties.Resources.Planche_3joueurs_Large;
+            resources.ApplyResources(this.plateau, "plateau");
+            this.plateau.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.plateau.Name = "plateau";
+            this.plateau.Click += new System.EventHandler(this.plateau_Click);
             // 
-            // panel2
+            // p1Panel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.pictureBox7);
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label1);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
+            this.p1Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.p1Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.p1Panel.Controls.Add(this.label13);
+            this.p1Panel.Controls.Add(this.flowLayoutPanel1);
+            this.p1Panel.Controls.Add(this.label12);
+            this.p1Panel.Controls.Add(this.label11);
+            this.p1Panel.Controls.Add(this.label10);
+            this.p1Panel.Controls.Add(this.pictureBox7);
+            this.p1Panel.Controls.Add(this.pictureBox6);
+            this.p1Panel.Controls.Add(this.pictureBox5);
+            this.p1Panel.Controls.Add(this.label9);
+            this.p1Panel.Controls.Add(this.label8);
+            this.p1Panel.Controls.Add(this.label7);
+            this.p1Panel.Controls.Add(this.label4);
+            this.p1Panel.Controls.Add(this.pictureBox4);
+            this.p1Panel.Controls.Add(this.pictureBox3);
+            this.p1Panel.Controls.Add(this.pictureBox2);
+            this.p1Panel.Controls.Add(this.pictureBox1);
+            this.p1Panel.Controls.Add(this.label6);
+            this.p1Panel.Controls.Add(this.label5);
+            this.p1Panel.Controls.Add(this.label1);
+            resources.ApplyResources(this.p1Panel, "p1Panel");
+            this.p1Panel.Name = "p1Panel";
             // 
             // label13
             // 
@@ -275,37 +276,36 @@ namespace Meduris
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // panel3
+            // p2Panel
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.flowLayoutPanel2);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.pictureBox8);
-            this.panel3.Controls.Add(this.pictureBox9);
-            this.panel3.Controls.Add(this.pictureBox10);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.pictureBox11);
-            this.panel3.Controls.Add(this.pictureBox12);
-            this.panel3.Controls.Add(this.pictureBox13);
-            this.panel3.Controls.Add(this.pictureBox14);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.label2);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
+            this.p2Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.p2Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.p2Panel.Controls.Add(this.label14);
+            this.p2Panel.Controls.Add(this.flowLayoutPanel2);
+            this.p2Panel.Controls.Add(this.label15);
+            this.p2Panel.Controls.Add(this.label16);
+            this.p2Panel.Controls.Add(this.label17);
+            this.p2Panel.Controls.Add(this.pictureBox8);
+            this.p2Panel.Controls.Add(this.pictureBox9);
+            this.p2Panel.Controls.Add(this.pictureBox10);
+            this.p2Panel.Controls.Add(this.label18);
+            this.p2Panel.Controls.Add(this.label19);
+            this.p2Panel.Controls.Add(this.label20);
+            this.p2Panel.Controls.Add(this.label21);
+            this.p2Panel.Controls.Add(this.pictureBox11);
+            this.p2Panel.Controls.Add(this.pictureBox12);
+            this.p2Panel.Controls.Add(this.pictureBox13);
+            this.p2Panel.Controls.Add(this.pictureBox14);
+            this.p2Panel.Controls.Add(this.label22);
+            this.p2Panel.Controls.Add(this.label2);
+            resources.ApplyResources(this.p2Panel, "p2Panel");
+            this.p2Panel.Name = "p2Panel";
             // 
             // label14
             // 
@@ -431,30 +431,30 @@ namespace Meduris
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // panel4
+            // p3Panel
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.label23);
-            this.panel4.Controls.Add(this.flowLayoutPanel3);
-            this.panel4.Controls.Add(this.label24);
-            this.panel4.Controls.Add(this.label25);
-            this.panel4.Controls.Add(this.label26);
-            this.panel4.Controls.Add(this.pictureBox15);
-            this.panel4.Controls.Add(this.pictureBox16);
-            this.panel4.Controls.Add(this.pictureBox17);
-            this.panel4.Controls.Add(this.label27);
-            this.panel4.Controls.Add(this.label28);
-            this.panel4.Controls.Add(this.label29);
-            this.panel4.Controls.Add(this.label30);
-            this.panel4.Controls.Add(this.pictureBox18);
-            this.panel4.Controls.Add(this.pictureBox19);
-            this.panel4.Controls.Add(this.pictureBox20);
-            this.panel4.Controls.Add(this.pictureBox21);
-            this.panel4.Controls.Add(this.label31);
-            this.panel4.Controls.Add(this.label3);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
+            this.p3Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.p3Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.p3Panel.Controls.Add(this.label23);
+            this.p3Panel.Controls.Add(this.flowLayoutPanel3);
+            this.p3Panel.Controls.Add(this.label24);
+            this.p3Panel.Controls.Add(this.label25);
+            this.p3Panel.Controls.Add(this.label26);
+            this.p3Panel.Controls.Add(this.pictureBox15);
+            this.p3Panel.Controls.Add(this.pictureBox16);
+            this.p3Panel.Controls.Add(this.pictureBox17);
+            this.p3Panel.Controls.Add(this.label27);
+            this.p3Panel.Controls.Add(this.label28);
+            this.p3Panel.Controls.Add(this.label29);
+            this.p3Panel.Controls.Add(this.label30);
+            this.p3Panel.Controls.Add(this.pictureBox18);
+            this.p3Panel.Controls.Add(this.pictureBox19);
+            this.p3Panel.Controls.Add(this.pictureBox20);
+            this.p3Panel.Controls.Add(this.pictureBox21);
+            this.p3Panel.Controls.Add(this.label31);
+            this.p3Panel.Controls.Add(this.label3);
+            resources.ApplyResources(this.p3Panel, "p3Panel");
+            this.p3Panel.Name = "p3Panel";
             // 
             // label23
             // 
@@ -580,28 +580,29 @@ namespace Meduris
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // panel5
+            // scopePanel
             // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
+            this.scopePanel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.scopePanel, "scopePanel");
+            this.scopePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.scopePanel.Name = "scopePanel";
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Meduris.Properties.Resources.background;
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.scopePanel);
+            this.Controls.Add(this.p3Panel);
+            this.Controls.Add(this.p2Panel);
+            this.Controls.Add(this.p1Panel);
+            this.Controls.Add(this.plateau);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.p1Panel.ResumeLayout(false);
+            this.p1Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -609,8 +610,8 @@ namespace Meduris
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.p2Panel.ResumeLayout(false);
+            this.p2Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -618,8 +619,8 @@ namespace Meduris
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.p3Panel.ResumeLayout(false);
+            this.p3Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
@@ -633,10 +634,10 @@ namespace Meduris
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel plateau;
+        private System.Windows.Forms.Panel p1Panel;
+        private System.Windows.Forms.Panel p2Panel;
+        private System.Windows.Forms.Panel p3Panel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -692,7 +693,7 @@ namespace Meduris
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel scopePanel;
     }
 }
 

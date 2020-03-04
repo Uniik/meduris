@@ -28,3 +28,4 @@ C:\Users\1769249\Documents\GitHub\meduris\Meduris\obj\Debug\Meduris.csproj.Gener
 C:\Users\1769249\Documents\GitHub\meduris\Meduris\obj\Debug\Meduris.csproj.CoreCompileInputs.cache
 C:\Users\1769249\Documents\GitHub\meduris\Meduris\obj\Debug\Meduris.exe
 C:\Users\1769249\Documents\GitHub\meduris\Meduris\obj\Debug\Meduris.pdb
+G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.Properties.Resources.resources
