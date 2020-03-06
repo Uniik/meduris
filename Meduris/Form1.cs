@@ -13,9 +13,9 @@ namespace Meduris
 {
     public partial class Form1 : Form
     {
-        private Bitmap bmp;
+        private Bitmap currentscope;
         private Graphics gr;
-        private bool mouseOverPlateau = false;
+        bool mouseOverPlateau = false;
         readonly Point centre = new Point(539, 527);
         readonly Point[] casesPoints = new Point[]
         { new Point(135, 268), new Point(192, 209), new Point(256, 153), new Point(329, 116),
@@ -48,7 +48,7 @@ namespace Meduris
             var startWidth = endWidth / scaleFactor;
             var startHeight = endHeight / scaleFactor;
 
-            bmp = new Bitmap(startWidth, startHeight);
+            Bitmap bmp = new Bitmap(startWidth, startHeight);
 
             gr = plateau.CreateGraphics();
             gr = Graphics.FromImage(bmp);
@@ -57,7 +57,15 @@ namespace Meduris
             var yPos = Math.Max(0, MousePosition.Y - (startHeight / 2));
 
             gr.CopyFromScreen(xPos, yPos, 0, 0, new Size(endWidth, endWidth));
-            scopePanel.BackgroundImage = bmp;
+            if (!Utils.compareBitMap(currentscope, bmp))
+            {
+                scopePanel.BackgroundImage = bmp;
+                currentscope = bmp;
+            }
+            else
+            {
+                Console.WriteLine("test");
+            }
         }
 
         private void plateau_Click(object sender, EventArgs e)
@@ -72,10 +80,18 @@ namespace Meduris
             pb.Size = new System.Drawing.Size(50, 50);
             pb.BackColor = Color.Transparent;
             float test = (float)Math.Atan2(centre.Y - p.Y, centre.X - p.X) * (float)(180 / Math.PI) + 270;
-            pb.Image = Utilities.RotateImage(i, new PointF((float)i.Width / 2, (float)i.Height / 2), test);
+            pb.Image = Utils.RotateImage(i, new PointF((float)i.Width / 2, (float)i.Height / 2), test);
             this.plateau.Controls.Add(pb);
         }
 
+        private void Plateau_MouseEnter(object sender, EventArgs e)
+        {
+            mouseOverPlateau = true;
+        }
 
+        private void Plateau_MouseLeave(object sender, EventArgs e)
+        {
+            mouseOverPlateau = false;
+        }
     }
 }

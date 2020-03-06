@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Meduris
 {
-    public sealed class Utilities
+    public sealed class Utils
     {
 
         public static Bitmap RotateImage(Image image, PointF offset, float angle)
@@ -35,6 +35,23 @@ namespace Meduris
             g.DrawImage(image, new PointF(0, 0));
 
             return rotatedBmp;
+        }
+
+        public static bool compareBitMap(Bitmap bmp1, Bitmap bmp2)
+        {
+
+            if (bmp1 == null || bmp2 == null)
+                return false;
+            for (int colone = 0; colone < bmp1.Width; colone++)
+            {
+                for (int rangee = 0; rangee < bmp1.Height; rangee++)
+                {
+                    if (!bmp1.GetPixel(colone, rangee).Equals(bmp2.GetPixel(colone, rangee)))
+                        return false;
+                }
+            }
+
+            return true;
         }
     }
 }

@@ -124,6 +124,8 @@ namespace Meduris
             this.plateau.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.plateau.Name = "plateau";
             this.plateau.Click += new System.EventHandler(this.plateau_Click);
+            this.plateau.MouseEnter += new System.EventHandler(this.Plateau_MouseEnter);
+            this.plateau.MouseLeave += new System.EventHandler(this.Plateau_MouseLeave);
             // 
             // p1Panel
             // 
