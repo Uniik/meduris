@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,19 +16,25 @@ namespace Meduris
         private Bitmap bmp;
         private Graphics gr;
         private bool mouseOverPlateau = false;
+        readonly Point centre = new Point(539, 527);
         readonly Point[] casesPoints = new Point[]
-        { new Point(151, 275), new Point(196, 223), new Point(261, 166), new Point(335, 131),
-            new Point(407, 102), new Point(510, 93), new Point(591, 109), new Point(674, 124),
-            new Point(767, 138), new Point(847, 160), new Point(892, 222), new Point(933, 295),
-            new Point(951, 387), new Point(978, 471), new Point(983, 578), new Point(954, 659),
-            new Point(919, 734), new Point(877, 817), new Point(834, 883), new Point(767, 912),
-            new Point(688, 940), new Point(607, 959), new Point(494, 948), new Point(413, 929),
-            new Point(325, 903), new Point(242, 858), new Point(200, 789), new Point(139, 733),
-            new Point(92, 655), new Point(78, 557), new Point(86, 468), new Point(107, 379) };
+        { new Point(135, 268), new Point(192, 209), new Point(256, 153), new Point(329, 116),
+            new Point(407, 88), new Point(512, 82), new Point(590, 97), new Point(676, 116),
+            new Point(769, 130), new Point(847, 154), new Point(897, 218), new Point(934, 289),
+            new Point(954, 384), new Point(978, 472), new Point(986, 575), new Point(952, 657),
+            new Point(915, 731), new Point(878, 814), new Point(837, 882), new Point(764, 919),
+            new Point(687, 943), new Point(604, 963), new Point(493, 950), new Point(409, 930),
+            new Point(321, 901), new Point(243, 853), new Point(196, 787), new Point(130, 729),
+            new Point(84, 650), new Point(74, 552), new Point(77, 465), new Point(95, 374) };
 
         public Form1()
         {
             InitializeComponent();
+            foreach(Point p in casesPoints)
+            {
+                addPic(p, new Bitmap(global::Meduris.Properties.Resources.temple_vert));
+            }
+            
         }
 
 
@@ -57,5 +64,18 @@ namespace Meduris
         {
             Console.WriteLine("x: " + Cursor.Position.X + " y: " + Cursor.Position.Y);
         }
+
+        private void addPic(Point p, Image i)
+        {
+            PictureBox pb = new PictureBox();
+            pb.Location = new System.Drawing.Point(p.X-25, p.Y-25);
+            pb.Size = new System.Drawing.Size(50, 50);
+            pb.BackColor = Color.Transparent;
+            float test = (float)Math.Atan2(centre.Y - p.Y, centre.X - p.X) * (float)(180 / Math.PI) + 270;
+            pb.Image = Utilities.RotateImage(i, new PointF((float)i.Width / 2, (float)i.Height / 2), test);
+            this.plateau.Controls.Add(pb);
+        }
+
+
     }
 }
