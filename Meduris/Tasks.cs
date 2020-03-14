@@ -8,28 +8,40 @@ using System.Windows.Forms;
 
 namespace Meduris
 {
-    class Tasks
+    static class Tasks
     {
-        private Form1 mainWindow;
-        public Tasks()
+        static private Meduris mainWindow;
+        static private Menu menu;
+        public static void launch()
         {
-            InitTimer();
-            mainWindow = new Form1();
-            Application.Run(mainWindow);
+            menu = new Menu();
+            Application.Run(menu);
         }
 
-        private Timer timer1;
-        public void InitTimer()
+        public static void startMeduris(string p1, string p2, string p3)
+        {
+            InitTimer();
+            mainWindow = new Meduris(p1, p2, p3);
+            menu.Hide();
+            mainWindow.Closed += (s, args) => menu.Close();
+            mainWindow.Show();
+        }
+
+        static private Timer timer1;
+        static public void InitTimer()
         {
             timer1 = new Timer();
             timer1.Tick += new EventHandler(timer1_Tick);
-            timer1.Interval = 100; // in miliseconds
+            timer1.Interval = 25; // in miliseconds
             timer1.Start();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private static void timer1_Tick(object sender, EventArgs e)
         {
-             mainWindow.scope();
+            if (mainWindow.MouseOverPlateau)
+            {
+                mainWindow.scope();
+            }
         }
 
     }

@@ -29,3 +29,12 @@ C:\Users\1769249\Documents\GitHub\meduris\Meduris\obj\Debug\Meduris.csproj.CoreC
 C:\Users\1769249\Documents\GitHub\meduris\Meduris\obj\Debug\Meduris.exe
 C:\Users\1769249\Documents\GitHub\meduris\Meduris\obj\Debug\Meduris.pdb
 G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.Properties.Resources.resources
+G:\apps\prog\github\c#\meduris\Meduris\bin\Debug\Meduris.exe.config
+G:\apps\prog\github\c#\meduris\Meduris\bin\Debug\Meduris.exe
+G:\apps\prog\github\c#\meduris\Meduris\bin\Debug\Meduris.pdb
+G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.csprojAssemblyReference.cache
+G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.csproj.GenerateResource.cache
+G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.exe
+G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.pdb
+G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.Meduris.resources
+G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.Menu.resources

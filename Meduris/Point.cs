@@ -23,6 +23,13 @@ namespace Meduris
         {
             return (x, y);
         }
+
+        //retourne la distance entre les deux points
+        public double getDistance(Point p)
+        {
+            Console.WriteLine(Math.Sqrt(Math.Pow(p.x - this.x, 2) + Math.Pow(p.y - this.y, 2)));
+            return Math.Sqrt(Math.Pow(p.x - this.x, 2) + Math.Pow(p.y - this.y, 2));
+        }
     }
 
 }

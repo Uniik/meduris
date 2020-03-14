@@ -16,7 +16,7 @@ namespace Meduris
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Tasks tasks = new Tasks();         
+            Tasks.launch();
         }
     }
 }
