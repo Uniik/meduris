@@ -11,7 +11,7 @@ namespace Meduris
         private int joueur;
         private int typeID;
         private Ouvrier[] ouvriers = new Ouvrier[3];
-        public enum type
+        public enum Type
         {
             laine = 0,
             bois = 1,
@@ -19,7 +19,7 @@ namespace Meduris
             cuivre = 3
         }
 
-        public HautPlateau(int joueur, type type)
+        public HautPlateau(int joueur, Type type)
         {
             this.joueur = joueur;
             this.typeID = (int)type;
