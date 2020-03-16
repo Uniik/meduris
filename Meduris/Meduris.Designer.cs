@@ -35,12 +35,10 @@ namespace Meduris
             this.p1Panel = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,12 +53,10 @@ namespace Meduris
             this.p2Panel = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -74,12 +70,10 @@ namespace Meduris
             this.p3Panel = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -91,10 +85,10 @@ namespace Meduris
             this.label31 = new System.Windows.Forms.Label();
             this.Player3Name = new System.Windows.Forms.Label();
             this.scopePanel = new System.Windows.Forms.Panel();
+            this.Logs = new System.Windows.Forms.TextBox();
             this.p1Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -102,7 +96,6 @@ namespace Meduris
             this.p2Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -110,7 +103,6 @@ namespace Meduris
             this.p3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -133,12 +125,10 @@ namespace Meduris
             this.p1Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.p1Panel.Controls.Add(this.label13);
             this.p1Panel.Controls.Add(this.flowLayoutPanel1);
-            this.p1Panel.Controls.Add(this.label12);
             this.p1Panel.Controls.Add(this.label11);
             this.p1Panel.Controls.Add(this.label10);
             this.p1Panel.Controls.Add(this.pictureBox7);
             this.p1Panel.Controls.Add(this.pictureBox6);
-            this.p1Panel.Controls.Add(this.pictureBox5);
             this.p1Panel.Controls.Add(this.label9);
             this.p1Panel.Controls.Add(this.label8);
             this.p1Panel.Controls.Add(this.label7);
@@ -167,13 +157,6 @@ namespace Meduris
             resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Silver;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.Silver;
@@ -201,13 +184,6 @@ namespace Meduris
             resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Meduris.Properties.Resources.meeple_bleu;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
             // 
             // label9
             // 
@@ -290,12 +266,10 @@ namespace Meduris
             this.p2Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.p2Panel.Controls.Add(this.label14);
             this.p2Panel.Controls.Add(this.flowLayoutPanel2);
-            this.p2Panel.Controls.Add(this.label15);
             this.p2Panel.Controls.Add(this.label16);
             this.p2Panel.Controls.Add(this.label17);
             this.p2Panel.Controls.Add(this.pictureBox8);
             this.p2Panel.Controls.Add(this.pictureBox9);
-            this.p2Panel.Controls.Add(this.pictureBox10);
             this.p2Panel.Controls.Add(this.label18);
             this.p2Panel.Controls.Add(this.label19);
             this.p2Panel.Controls.Add(this.label20);
@@ -322,13 +296,6 @@ namespace Meduris
             this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.Silver;
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
             // 
             // label16
             // 
@@ -357,13 +324,6 @@ namespace Meduris
             resources.ApplyResources(this.pictureBox9, "pictureBox9");
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Meduris.Properties.Resources.meeple_rouge;
-            resources.ApplyResources(this.pictureBox10, "pictureBox10");
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.TabStop = false;
             // 
             // label18
             // 
@@ -439,12 +399,10 @@ namespace Meduris
             this.p3Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.p3Panel.Controls.Add(this.label23);
             this.p3Panel.Controls.Add(this.flowLayoutPanel3);
-            this.p3Panel.Controls.Add(this.label24);
             this.p3Panel.Controls.Add(this.label25);
             this.p3Panel.Controls.Add(this.label26);
             this.p3Panel.Controls.Add(this.pictureBox15);
             this.p3Panel.Controls.Add(this.pictureBox16);
-            this.p3Panel.Controls.Add(this.pictureBox17);
             this.p3Panel.Controls.Add(this.label27);
             this.p3Panel.Controls.Add(this.label28);
             this.p3Panel.Controls.Add(this.label29);
@@ -471,13 +429,6 @@ namespace Meduris
             this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.flowLayoutPanel3, "flowLayoutPanel3");
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.Color.Silver;
-            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.Name = "label24";
             // 
             // label25
             // 
@@ -506,13 +457,6 @@ namespace Meduris
             resources.ApplyResources(this.pictureBox16, "pictureBox16");
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::Meduris.Properties.Resources.meeple_vert;
-            resources.ApplyResources(this.pictureBox17, "pictureBox17");
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.TabStop = false;
             // 
             // label27
             // 
@@ -589,16 +533,23 @@ namespace Meduris
             this.scopePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.scopePanel.Name = "scopePanel";
             // 
+            // Logs
+            // 
+            resources.ApplyResources(this.Logs, "Logs");
+            this.Logs.Name = "Logs";
+            this.Logs.ReadOnly = true;
+            // 
             // Meduris
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Meduris.Properties.Resources.background;
+            this.Controls.Add(this.Logs);
             this.Controls.Add(this.scopePanel);
+            this.Controls.Add(this.plateau);
             this.Controls.Add(this.p3Panel);
             this.Controls.Add(this.p2Panel);
             this.Controls.Add(this.p1Panel);
-            this.Controls.Add(this.plateau);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Meduris";
@@ -607,7 +558,6 @@ namespace Meduris
             this.p1Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -616,7 +566,6 @@ namespace Meduris
             this.p2Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -625,12 +574,12 @@ namespace Meduris
             this.p3Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -653,22 +602,18 @@ namespace Meduris
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
@@ -680,12 +625,10 @@ namespace Meduris
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
@@ -696,6 +639,7 @@ namespace Meduris
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel scopePanel;
+        private System.Windows.Forms.TextBox Logs;
     }
 }
 

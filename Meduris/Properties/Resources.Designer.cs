@@ -93,6 +93,16 @@ namespace Meduris.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap druide_normal {
+            get {
+                object obj = ResourceManager.GetObject("druide_normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hutte_bleu {
             get {
                 object obj = ResourceManager.GetObject("hutte_bleu", resourceCulture);

@@ -52,6 +52,8 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Case.cs" />
+    <Compile Include="HautPlateau.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>

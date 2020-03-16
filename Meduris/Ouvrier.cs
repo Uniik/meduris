@@ -26,7 +26,6 @@ namespace Meduris
 
         public Ouvrier(int joueur)
         {
-
         }
     }
 }

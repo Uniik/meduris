@@ -142,13 +142,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;plateau.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 86</value>
+    <value>309, 39</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>218, 50</value>
@@ -175,7 +175,7 @@
     <value>0</value>
   </data>
   <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 136</value>
+    <value>309, 89</value>
   </data>
   <data name="flowLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 3</value>
@@ -198,41 +198,11 @@
   <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 270</value>
-  </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>p1Panel</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 270</value>
+    <value>26, 223</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -241,7 +211,7 @@
     <value>15</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>0</value>
+    <value>8</value>
   </data>
   <data name="label11.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -256,13 +226,13 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 270</value>
+    <value>82, 226</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -271,7 +241,7 @@
     <value>14</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -286,10 +256,10 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 220</value>
+    <value>82, 176</value>
   </data>
   <data name="pictureBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -313,10 +283,10 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox7.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 220</value>
+    <value>26, 173</value>
   </data>
   <data name="pictureBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -340,40 +310,13 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 220</value>
-  </data>
-  <data name="pictureBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 0</value>
-  </data>
-  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
-    <value>pictureBox5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
-    <value>p1Panel</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 187</value>
+    <value>194, 140</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -382,7 +325,7 @@
     <value>10</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -397,13 +340,13 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 187</value>
+    <value>138, 140</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -412,7 +355,7 @@
     <value>9</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -427,13 +370,13 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 187</value>
+    <value>82, 140</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -442,7 +385,7 @@
     <value>8</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -457,13 +400,13 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 187</value>
+    <value>26, 140</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -472,7 +415,7 @@
     <value>7</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -487,10 +430,10 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 137</value>
+    <value>194, 90</value>
   </data>
   <data name="pictureBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -514,10 +457,10 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 137</value>
+    <value>138, 90</value>
   </data>
   <data name="pictureBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -541,10 +484,10 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 136</value>
+    <value>82, 89</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -568,10 +511,10 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 136</value>
+    <value>26, 89</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -595,7 +538,7 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -619,13 +562,13 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 84</value>
+    <value>26, 37</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>218, 50</value>
@@ -649,7 +592,7 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="Player1Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -658,7 +601,7 @@
     <value>Microsoft Sans Serif, 24pt</value>
   </data>
   <data name="Player1Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 18</value>
+    <value>28, 0</value>
   </data>
   <data name="Player1Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 37</value>
@@ -679,13 +622,13 @@
     <value>p1Panel</value>
   </data>
   <data name="&gt;&gt;Player1Name.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="p1Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1090, 87</value>
+    <value>1090, 12</value>
   </data>
   <data name="p1Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>765, 310</value>
+    <value>765, 253</value>
   </data>
   <data name="p1Panel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -700,13 +643,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;p1Panel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 82</value>
+    <value>309, 37</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>218, 50</value>
@@ -733,7 +676,7 @@
     <value>0</value>
   </data>
   <data name="flowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 132</value>
+    <value>309, 87</value>
   </data>
   <data name="flowLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 3</value>
@@ -756,41 +699,11 @@
   <data name="&gt;&gt;flowLayoutPanel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 266</value>
-  </data>
-  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="label15.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
-  </data>
-  <data name="&gt;&gt;label15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
-    <value>p2Panel</value>
-  </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 266</value>
+    <value>26, 221</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -799,7 +712,7 @@
     <value>32</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
-    <value>0</value>
+    <value>8</value>
   </data>
   <data name="label16.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -814,13 +727,13 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 266</value>
+    <value>82, 221</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -829,7 +742,7 @@
     <value>31</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label17.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -844,10 +757,10 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 216</value>
+    <value>82, 171</value>
   </data>
   <data name="pictureBox8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -871,10 +784,10 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 216</value>
+    <value>26, 171</value>
   </data>
   <data name="pictureBox9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -898,40 +811,13 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox9.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="pictureBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 216</value>
-  </data>
-  <data name="pictureBox10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 0</value>
-  </data>
-  <data name="pictureBox10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="pictureBox10.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox10.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.Name" xml:space="preserve">
-    <value>pictureBox10</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.Parent" xml:space="preserve">
-    <value>p2Panel</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="label18.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 183</value>
+    <value>194, 138</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -940,7 +826,7 @@
     <value>27</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -955,13 +841,13 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 183</value>
+    <value>138, 138</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -970,7 +856,7 @@
     <value>26</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label19.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -985,13 +871,13 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 183</value>
+    <value>82, 138</value>
   </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1000,7 +886,7 @@
     <value>25</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label20.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1015,13 +901,13 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="label21.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 183</value>
+    <value>26, 138</value>
   </data>
   <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1030,7 +916,7 @@
     <value>24</value>
   </data>
   <data name="label21.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1045,10 +931,10 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="pictureBox11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 133</value>
+    <value>194, 88</value>
   </data>
   <data name="pictureBox11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1072,10 +958,10 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox11.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="pictureBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 133</value>
+    <value>138, 88</value>
   </data>
   <data name="pictureBox12.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1099,10 +985,10 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox12.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="pictureBox13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 132</value>
+    <value>82, 87</value>
   </data>
   <data name="pictureBox13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1126,10 +1012,10 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox13.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="pictureBox14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 132</value>
+    <value>26, 87</value>
   </data>
   <data name="pictureBox14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1153,13 +1039,13 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox14.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="label22.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 80</value>
+    <value>26, 35</value>
   </data>
   <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
     <value>218, 50</value>
@@ -1183,7 +1069,7 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="Player2Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1192,7 +1078,7 @@
     <value>Microsoft Sans Serif, 24pt</value>
   </data>
   <data name="Player2Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 18</value>
+    <value>28, -2</value>
   </data>
   <data name="Player2Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 37</value>
@@ -1213,13 +1099,13 @@
     <value>p2Panel</value>
   </data>
   <data name="&gt;&gt;Player2Name.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="p2Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1090, 403</value>
+    <value>1090, 268</value>
   </data>
   <data name="p2Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>765, 310</value>
+    <value>765, 250</value>
   </data>
   <data name="p2Panel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1234,13 +1120,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;p2Panel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label23.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 82</value>
+    <value>309, 39</value>
   </data>
   <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
     <value>218, 50</value>
@@ -1267,7 +1153,7 @@
     <value>0</value>
   </data>
   <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 132</value>
+    <value>309, 89</value>
   </data>
   <data name="flowLayoutPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 3</value>
@@ -1290,41 +1176,11 @@
   <data name="&gt;&gt;flowLayoutPanel3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label24.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 266</value>
-  </data>
-  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="label24.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="label24.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label24.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label24.Name" xml:space="preserve">
-    <value>label24</value>
-  </data>
-  <data name="&gt;&gt;label24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
-    <value>p3Panel</value>
-  </data>
-  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="label25.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 266</value>
+    <value>26, 223</value>
   </data>
   <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1333,7 +1189,7 @@
     <value>32</value>
   </data>
   <data name="label25.Text" xml:space="preserve">
-    <value>0</value>
+    <value>8</value>
   </data>
   <data name="label25.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1348,13 +1204,13 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="label26.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 266</value>
+    <value>82, 225</value>
   </data>
   <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1363,7 +1219,7 @@
     <value>31</value>
   </data>
   <data name="label26.Text" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label26.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1378,10 +1234,10 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="pictureBox15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 216</value>
+    <value>82, 173</value>
   </data>
   <data name="pictureBox15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1405,10 +1261,10 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox15.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="pictureBox16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 216</value>
+    <value>26, 173</value>
   </data>
   <data name="pictureBox16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1432,40 +1288,13 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox16.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="pictureBox17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 216</value>
-  </data>
-  <data name="pictureBox17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 0</value>
-  </data>
-  <data name="pictureBox17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="pictureBox17.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox17.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;pictureBox17.Name" xml:space="preserve">
-    <value>pictureBox17</value>
-  </data>
-  <data name="&gt;&gt;pictureBox17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox17.Parent" xml:space="preserve">
-    <value>p3Panel</value>
-  </data>
-  <data name="&gt;&gt;pictureBox17.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="label27.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 183</value>
+    <value>194, 140</value>
   </data>
   <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1474,7 +1303,7 @@
     <value>27</value>
   </data>
   <data name="label27.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label27.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1489,13 +1318,13 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="label28.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 183</value>
+    <value>138, 140</value>
   </data>
   <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1504,7 +1333,7 @@
     <value>26</value>
   </data>
   <data name="label28.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label28.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1519,13 +1348,13 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 183</value>
+    <value>82, 140</value>
   </data>
   <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1534,7 +1363,7 @@
     <value>25</value>
   </data>
   <data name="label29.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label29.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1549,13 +1378,13 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="label30.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 183</value>
+    <value>26, 140</value>
   </data>
   <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1564,7 +1393,7 @@
     <value>24</value>
   </data>
   <data name="label30.Text" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label30.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1579,10 +1408,10 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="pictureBox18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 133</value>
+    <value>194, 90</value>
   </data>
   <data name="pictureBox18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1606,10 +1435,10 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox18.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="pictureBox19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 133</value>
+    <value>138, 90</value>
   </data>
   <data name="pictureBox19.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1633,10 +1462,10 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox19.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="pictureBox20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 132</value>
+    <value>82, 89</value>
   </data>
   <data name="pictureBox20.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1660,10 +1489,10 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox20.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="pictureBox21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 132</value>
+    <value>26, 89</value>
   </data>
   <data name="pictureBox21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -1687,13 +1516,13 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;pictureBox21.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="label31.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="label31.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 80</value>
+    <value>26, 37</value>
   </data>
   <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
     <value>218, 50</value>
@@ -1717,7 +1546,7 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="Player3Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1726,7 +1555,7 @@
     <value>Microsoft Sans Serif, 24pt</value>
   </data>
   <data name="Player3Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 12</value>
+    <value>28, 0</value>
   </data>
   <data name="Player3Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 37</value>
@@ -1747,13 +1576,13 @@
     <value>p3Panel</value>
   </data>
   <data name="&gt;&gt;Player3Name.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="p3Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1090, 719</value>
+    <value>1090, 522</value>
   </data>
   <data name="p3Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>765, 310</value>
+    <value>765, 252</value>
   </data>
   <data name="p3Panel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1768,7 +1597,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;p3Panel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="scopePanel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -1792,6 +1621,36 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;scopePanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Logs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="Logs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1090, 816</value>
+  </data>
+  <data name="Logs.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Logs.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="Logs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>503, 213</value>
+  </data>
+  <data name="Logs.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Logs.Name" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="&gt;&gt;Logs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Logs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Logs.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -15,44 +15,37 @@ namespace Meduris
     public partial class Meduris : Form
     {
         private Bitmap currentscope;
+        private Joueur[] joueurs;
         private Graphics gr;
-        private string player1, player2, player3;
         private bool mouseOverPlateau = false;
         readonly Point centre = new Point(539, 527);
-        readonly Point[] casesPoints = new Point[]
-        { new Point(135, 268), new Point(192, 209), new Point(256, 153), new Point(329, 116),
-            new Point(407, 88), new Point(512, 82), new Point(590, 97), new Point(676, 116),
-            new Point(769, 130), new Point(847, 154), new Point(897, 218), new Point(934, 289),
-            new Point(954, 384), new Point(978, 472), new Point(986, 575), new Point(952, 657),
-            new Point(915, 731), new Point(878, 814), new Point(837, 882), new Point(764, 919),
-            new Point(687, 943), new Point(604, 963), new Point(493, 950), new Point(409, 930),
-            new Point(321, 901), new Point(243, 853), new Point(196, 787), new Point(130, 729),
-            new Point(84, 650), new Point(74, 552), new Point(77, 465), new Point(95, 374) };
+        readonly Case[] cases = new Case[]
+        { new Case (new Point(135, 268)), new Case (new Point(192, 209)), new Case (new Point(256, 153)), new Case (new Point(329, 116)),
+            new Case (new Point(407, 88)), new Case (new Point(512, 82)), new Case (new Point(590, 97)), new Case (new Point(676, 116)),
+            new Case (new Point(769, 130)), new Case (new Point(847, 154)), new Case (new Point(897, 218)), new Case (new Point(934, 289)),
+            new Case (new Point(954, 384)), new Case (new Point(978, 472)), new Case (new Point(986, 575)), new Case (new Point(952, 657)),
+            new Case (new Point(915, 731)), new Case (new Point(878, 814)), new Case (new Point(837, 882)), new Case (new Point(764, 919)),
+            new Case (new Point(687, 943)), new Case (new Point(604, 963)), new Case (new Point(493, 950)), new Case (new Point(409, 930)),
+            new Case (new Point(321, 901)), new Case (new Point(243, 853)), new Case (new Point(196, 787)), new Case (new Point(130, 729)),
+            new Case (new Point(84, 650)), new Case (new Point(74, 552)), new Case (new Point(77, 465)), new Case (new Point(95, 374)) };
 
         public bool MouseOverPlateau { get => mouseOverPlateau; set => mouseOverPlateau = value; }
 
-        public Meduris(string j1, string j2, string j3)
+        public Meduris(Joueur[] joueurs)
         {
-            this.player1 = j1;
-            this.player2 = j2;
-            this.player3 = j3;
+            this.joueurs = joueurs;
             InitializeComponent();
-            this.Player1Name.Text = player1;
-            this.Player2Name.Text = player2;
-            this.Player3Name.Text = player3;
+            this.Player1Name.Text = joueurs[0].Nom;
+            this.Player2Name.Text = joueurs[1].Nom;
+            this.Player3Name.Text = joueurs[2].Nom;
 
         }
 
-
-        public void testi()
+        public void addLog(string text)
         {
-            foreach (Point p in casesPoints)
-            {
-                addPic(p, new Bitmap(global::Meduris.Properties.Resources.temple_vert));
-            }
-
-
+            Logs.Text = text +"\r\n" + Logs.Text;
         }
+        
         public void scope()
         {
             var endWidth = 300;
@@ -82,36 +75,52 @@ namespace Meduris
         private void plateau_Click(object sender, EventArgs e)
         {
             Point newPoint = new Point(Cursor.Position.X, Cursor.Position.Y);
-            Point plusProche = casesPoints[0];
+            Point plusProche = cases[0].Point;
             int test = 0;
 
             //trouve la case la plus proche
-            for(int i =0; i< casesPoints.Length ; i++)
+            for(int i =0; i< cases.Length ; i++)
             {
-                if (casesPoints[i].getDistance(newPoint) < plusProche.getDistance(newPoint))
+                if (cases[i].Point.getDistance(newPoint) < plusProche.getDistance(newPoint))
                 {
-                    plusProche = casesPoints[i];
+                    plusProche = cases[i].Point;
                     test = i;
                 }
             }
             // vérifie que le curseur est dans la case
             if(plusProche.getDistance(newPoint) < 30)
             {
-                addPic(plusProche, new Bitmap(global::Meduris.Properties.Resources.temple_vert));
+                addPic(plusProche, new Bitmap(global::Meduris.Properties.Resources.temple_vert), 50);
+                moveDruid(plusProche);
             }
 
             Console.WriteLine("X: " +Cursor.Position.X +"y: " +Cursor.Position.Y);
         }
 
-        private void addPic(Point p, Image i)
+        private void addPic(Point p, Image i, int size)
         {
             PictureBox pb = new PictureBox();
-            pb.Location = new System.Drawing.Point(p.X-25, p.Y-25);
-            pb.Size = new System.Drawing.Size(50, 50);
+            pb.Location = new System.Drawing.Point(p.X-size/2, p.Y-size/2);
+            pb.Size = new System.Drawing.Size(size, size);
             pb.BackColor = Color.Transparent;
-            float test = (float)Math.Atan2(centre.Y - p.Y, centre.X - p.X) * (float)(180 / Math.PI) + 270;
-            pb.Image = Utils.RotateImage(i, new PointF((float)i.Width / 2, (float)i.Height / 2), test);
+            float angle = (float)Math.Atan2(centre.Y - p.Y, centre.X - p.X) * (float)(180 / Math.PI) + 270;
+            pb.Image = Utils.RotateImage(i, new PointF((float)i.Width / 2, (float)i.Height / 2), angle);
             this.plateau.Controls.Add(pb);
+        }
+
+        /// <summary>
+        /// par rapport d'homothétie:
+        /// R/r = (x3-x1)/(x2-x1)
+        /// R/r* (x2-x1) = x3-x1
+        /// R/r* (x2-x1)+x1 = x3
+        /// </summary>
+        /// <param name="p"></param>
+        private void moveDruid(Point p)
+        {
+            double rapportHomothetie = (p.getDistance(centre) + 50)/p.getDistance(centre); // le druide sera à 50 pixel au dessus de la case
+            double x = rapportHomothetie * (p.X - centre.X) + centre.X;
+            double y = rapportHomothetie * (p.Y - centre.Y) + centre.Y;
+            addPic(new Point(Convert.ToInt32(x), Convert.ToInt32(y)), global::Meduris.Properties.Resources.druide_normal, 60);
         }
 
         private void Plateau_MouseEnter(object sender, EventArgs e)
@@ -123,5 +132,6 @@ namespace Meduris
         {
             mouseOverPlateau = false;
         }
+
     }
 }
