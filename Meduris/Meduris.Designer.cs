@@ -85,7 +85,7 @@ namespace Meduris
             this.label31 = new System.Windows.Forms.Label();
             this.Player3Name = new System.Windows.Forms.Label();
             this.scopePanel = new System.Windows.Forms.Panel();
-            this.Logs = new System.Windows.Forms.TextBox();
+            this.Logs = new System.Windows.Forms.RichTextBox();
             this.p1Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -579,7 +579,6 @@ namespace Meduris
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -639,7 +638,7 @@ namespace Meduris
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel scopePanel;
-        private System.Windows.Forms.TextBox Logs;
+        private System.Windows.Forms.RichTextBox Logs;
     }
 }
 

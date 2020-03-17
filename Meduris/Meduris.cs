@@ -16,8 +16,11 @@ namespace Meduris
     {
         private Bitmap currentscope;
         private Joueur[] joueurs;
+        private Joueur selectedPlayer;
         private Graphics gr;
+        private bool poserOuvrier = false;
         private bool mouseOverPlateau = false;
+        readonly Color defaultLogColor = Color.Black;
         readonly Point centre = new Point(539, 527);
         readonly Case[] cases = new Case[]
         { new Case (new Point(135, 268)), new Case (new Point(192, 209)), new Case (new Point(256, 153)), new Case (new Point(329, 116)),
@@ -28,8 +31,17 @@ namespace Meduris
             new Case (new Point(687, 943)), new Case (new Point(604, 963)), new Case (new Point(493, 950)), new Case (new Point(409, 930)),
             new Case (new Point(321, 901)), new Case (new Point(243, 853)), new Case (new Point(196, 787)), new Case (new Point(130, 729)),
             new Case (new Point(84, 650)), new Case (new Point(74, 552)), new Case (new Point(77, 465)), new Case (new Point(95, 374)) };
+        readonly HautPlateau[] hautPlateaux = new HautPlateau[]
+        {
+            new HautPlateau(new Point(670, 440), HautPlateau.Type.laine),
+            new HautPlateau(new Point(453, 347), HautPlateau.Type.bois),
+            new HautPlateau(new Point(370, 607), HautPlateau.Type.pierre),
+            new HautPlateau(new Point(610, 669), HautPlateau.Type.cuivre)
+        };
 
         public bool MouseOverPlateau { get => mouseOverPlateau; set => mouseOverPlateau = value; }
+        public bool PoserOuvrier { get => poserOuvrier; set => poserOuvrier = value; }
+        public Joueur SelectedPlayer { get => selectedPlayer; set => selectedPlayer = value; }
 
         public Meduris(Joueur[] joueurs)
         {
@@ -38,14 +50,21 @@ namespace Meduris
             this.Player1Name.Text = joueurs[0].Nom;
             this.Player2Name.Text = joueurs[1].Nom;
             this.Player3Name.Text = joueurs[2].Nom;
-
         }
 
-        public void addLog(string text)
+        public void addLog(string text, Color? couleur = null)
         {
-            Logs.Text = text +"\r\n" + Logs.Text;
+            string message;
+            if (couleur == null)
+            {
+                couleur = Color.Black;
+            }
+            message = text;
+            Logs.Text = message + "\r\n" + Logs.Text;
+            Logs.Find(message);
+            Logs.SelectionColor = (Color)couleur;
         }
-        
+
         public void scope()
         {
             var endWidth = 300;
@@ -75,36 +94,104 @@ namespace Meduris
         private void plateau_Click(object sender, EventArgs e)
         {
             Point newPoint = new Point(Cursor.Position.X, Cursor.Position.Y);
-            Point plusProche = cases[0].Point;
-            int test = 0;
+            Point ClickedCase = null;
+            Point ClickedHautPlateauPoint = null;
+            HautPlateau ClickedHautPlateau = null;
 
-            //trouve la case la plus proche
-            for(int i =0; i< cases.Length ; i++)
+            //ClickedCase = trouverPoint(newPoint, cases);
+            ClickedHautPlateauPoint = trouverPoint(newPoint, hautPlateaux);
+
+            if (ClickedHautPlateauPoint != null)
             {
-                if (cases[i].Point.getDistance(newPoint) < plusProche.getDistance(newPoint))
+                if (poserOuvrier)
                 {
-                    plusProche = cases[i].Point;
-                    test = i;
+                    foreach(HautPlateau h in hautPlateaux)
+                    {
+                        if(h.Point == ClickedHautPlateauPoint)
+                        {
+                            if (h.ajouterOuvrier(selectedPlayer))
+                            {
+                                addPic(trouverPointOuvrier(h), h.Ouvriers.Last<Ouvrier>().Image);
+                            }
+                            else
+                            {
+                                Tasks.CompteurOuvrier--;
+                                Console.WriteLine("erreur");
+                            }
+                        }
+                    }
+
+                    poserOuvrier = false;
+                    Tasks.poserOuvriers();
+
                 }
             }
-            // vérifie que le curseur est dans la case
-            if(plusProche.getDistance(newPoint) < 30)
+
+            if (ClickedCase != null)
             {
-                addPic(plusProche, new Bitmap(global::Meduris.Properties.Resources.temple_vert), 50);
-                moveDruid(plusProche);
             }
 
-            Console.WriteLine("X: " +Cursor.Position.X +"y: " +Cursor.Position.Y);
+            Console.WriteLine("X: " + Cursor.Position.X + "y: " + Cursor.Position.Y);
         }
 
-        private void addPic(Point p, Image i, int size)
+        private Point trouverPointOuvrier(HautPlateau h)
         {
-            PictureBox pb = new PictureBox();
-            pb.Location = new System.Drawing.Point(p.X-size/2, p.Y-size/2);
-            pb.Size = new System.Drawing.Size(size, size);
+            Console.WriteLine(h.Ouvriers.Count);
+            int distance = 30 + 50 * (h.Ouvriers.Count-1);
+            double rapportHomothetie = (h.Point.getDistance(centre) + distance) / h.Point.getDistance(centre); // le druide sera à 50 pixel au dessus de la case
+            double x = rapportHomothetie * (h.Point.X - centre.X) + centre.X;
+            double y = rapportHomothetie * (h.Point.Y - centre.Y) + centre.Y;
+            return new Point(Convert.ToInt32(x), Convert.ToInt32(y));
+        }
+
+        private Point trouverPoint(Point newPoint, Object[] objectAvecPoint)
+        {
+            List<Point> Listepoints = new List<Point>();
+            if (objectAvecPoint is HautPlateau[])
+            {
+                foreach (HautPlateau h in objectAvecPoint)
+
+                {
+                    Listepoints.Add(h.Point);
+                }
+            }
+            if(objectAvecPoint is Case[])
+            {
+                foreach (Case c in objectAvecPoint)
+                {
+                    Listepoints.Add(c.Point);
+                }
+            }
+
+
+            //trouve le point le plus proche
+
+            Point plusProche = Listepoints[0];
+            for (int i = 0; i < Listepoints.Count; i++)
+            {
+                if (Listepoints[i].getDistance(newPoint) < plusProche.getDistance(newPoint))
+                {
+                    plusProche = Listepoints[i];
+                }
+            }
+
+
+            // vérifie que le curseur est dans la case
+            if (plusProche.getDistance(newPoint) < 30)
+            {
+                return plusProche;
+            }
+            else return null;
+        }
+
+
+        private void addPic(Point p, PictureBox pb)
+        {
+            pb.Location = new System.Drawing.Point(p.X - pb.Width / 2, p.Y - pb.Width / 2);
             pb.BackColor = Color.Transparent;
+            Image i = pb.Image;
             float angle = (float)Math.Atan2(centre.Y - p.Y, centre.X - p.X) * (float)(180 / Math.PI) + 270;
-            pb.Image = Utils.RotateImage(i, new PointF((float)i.Width / 2, (float)i.Height / 2), angle);
+            pb.Image = Utils.RotateImage(i, new PointF((float)i.Width / 2, (float)i.Width / 2), angle);
             this.plateau.Controls.Add(pb);
         }
 
@@ -117,10 +204,10 @@ namespace Meduris
         /// <param name="p"></param>
         private void moveDruid(Point p)
         {
-            double rapportHomothetie = (p.getDistance(centre) + 50)/p.getDistance(centre); // le druide sera à 50 pixel au dessus de la case
+            double rapportHomothetie = (p.getDistance(centre) + 50) / p.getDistance(centre); // le druide sera à 50 pixel au dessus de la case
             double x = rapportHomothetie * (p.X - centre.X) + centre.X;
             double y = rapportHomothetie * (p.Y - centre.Y) + centre.Y;
-            addPic(new Point(Convert.ToInt32(x), Convert.ToInt32(y)), global::Meduris.Properties.Resources.druide_normal, 60);
+            //addPic(new Point(Convert.ToInt32(x), Convert.ToInt32(y)), global::Meduris.Properties.Resources.druide_normal, 60);
         }
 
         private void Plateau_MouseEnter(object sender, EventArgs e)

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Meduris
 {
@@ -12,9 +13,8 @@ namespace Meduris
     /// </summary>
     class Ouvrier
     {
-        private int positionID;
-        private int hauteur;
-        private int joueur;
+        private Joueur joueur;
+        private PictureBox image;
         public enum Position
         {
             laine = 0,
@@ -22,21 +22,22 @@ namespace Meduris
             pierre = 2,
             cuivre = 3
         }
-        public static Image[] images = 
+        public readonly static Image[] images = 
         {
             Properties.Resources.meeple_bleu,
             Properties.Resources.meeple_rouge,
             Properties.Resources.meeple_vert
         };
 
-        public int position { get => positionID; set => positionID = value; }
-        public int Hauteur { get => hauteur; set => hauteur = value; }
+        public PictureBox Image { get => image; set => image = value; }
 
-        public Ouvrier(int joueur, int hauteur, Position position)
+        public Ouvrier(Joueur joueur)
         {
-            this.joueur = joueur;
-            this.hauteur = hauteur;
-            this.positionID = (int)position;
+            int index = Array.IndexOf(Tasks.Joueurs, joueur);
+            image = new PictureBox();
+            image.Width = 50;
+            image.Height = 50;
+            image.Image = images[index];
         }
     }
 }

@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Meduris
 {
-    class HautPlateau
+    public class HautPlateau
     {
-        private int joueur;
+        private Point point;
         private int typeID;
-        private Ouvrier[] ouvriers = new Ouvrier[3];
+        private List<Ouvrier> ouvriers = new List<Ouvrier>();
+
+        public Point Point { get => point; set => point = value; }
+        internal List<Ouvrier> Ouvriers { get => ouvriers; set => ouvriers = value; }
+
         public enum Type
         {
             laine = 0,
@@ -19,10 +23,29 @@ namespace Meduris
             cuivre = 3
         }
 
-        public HautPlateau(int joueur, Type type)
+        public HautPlateau(Point point, Type type)
         {
-            this.joueur = joueur;
+            this.point = point;
             this.typeID = (int)type;
+        }
+
+        public bool ajouterOuvrier(Joueur joueur)
+        {
+            Ouvrier nouveau = new Ouvrier(joueur);
+            if (ouvriers.Count < 3)
+            {
+                if (joueur.Ouvriers.Count < 3)
+                {
+                    ouvriers.Add(nouveau);
+                    joueur.Ouvriers.Add(nouveau);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return false;
         }
     }
 }

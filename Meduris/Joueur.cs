@@ -18,6 +18,8 @@ namespace Meduris
         private int ouvriersDisponible = 2;
         private int points = 5;
 
+        private List<Ouvrier> ouvriers;
+
         public readonly int huttesTotal = 8;
         public readonly int templesTotal = 2;
         public readonly int ouvriersTotal = 2;
@@ -25,7 +27,9 @@ namespace Meduris
         public Joueur(string nom)
         {
             this.nom = nom;
+            this.ouvriers = new List<Ouvrier>();
         }
+
 
         public int Laine { get => laine; set => laine = value; }
         public int Bois { get => bois; set => bois = value; }
@@ -36,5 +40,6 @@ namespace Meduris
         public int TemplesDisponibles { get => templesDisponibles; set => templesDisponibles = value; }
         public int OuvriersDisponible { get => ouvriersDisponible; set => ouvriersDisponible = value; }
         public int Points { get => points; set => points = value; }
+        internal List<Ouvrier> Ouvriers { get => ouvriers; set => ouvriers = value; }
     }
 }
