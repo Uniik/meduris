@@ -38,3 +38,4 @@ G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.exe
 G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.pdb
 G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.Meduris.resources
 G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.Menu.resources
+G:\apps\prog\github\c#\meduris\Meduris\obj\Debug\Meduris.ChoixRessource.resources

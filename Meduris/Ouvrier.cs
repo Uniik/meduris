@@ -30,9 +30,11 @@ namespace Meduris
         };
 
         public PictureBox Image { get => image; set => image = value; }
+        public Joueur Joueur { get => joueur; set => joueur = value; }
 
         public Ouvrier(Joueur joueur)
         {
+            this.joueur = joueur;
             int index = Array.IndexOf(Tasks.Joueurs, joueur);
             image = new PictureBox();
             image.Width = 50;

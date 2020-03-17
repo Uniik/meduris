@@ -14,6 +14,7 @@ namespace Meduris
 
         public Point Point { get => point; set => point = value; }
         internal List<Ouvrier> Ouvriers { get => ouvriers; set => ouvriers = value; }
+        public int TypeID { get => typeID; set => typeID = value; }
 
         public enum Type
         {

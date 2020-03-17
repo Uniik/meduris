@@ -43,6 +43,8 @@ namespace Meduris
         public bool PoserOuvrier { get => poserOuvrier; set => poserOuvrier = value; }
         public Joueur SelectedPlayer { get => selectedPlayer; set => selectedPlayer = value; }
 
+        public HautPlateau[] HautPlateaux => hautPlateaux;
+
         public Meduris(Joueur[] joueurs)
         {
             this.joueurs = joueurs;
@@ -122,7 +124,10 @@ namespace Meduris
                     }
 
                     poserOuvrier = false;
-                    Tasks.poserOuvriers();
+                    if (Tasks.InitOuvrier)
+                    {
+                        Tasks.InitialiserOuvriers();
+                    }
 
                 }
             }
@@ -218,6 +223,34 @@ namespace Meduris
         private void Plateau_MouseLeave(object sender, EventArgs e)
         {
             mouseOverPlateau = false;
+        }
+
+        public void refreshStats()
+        {
+            this.J1PDV.Text = "Point de victoire: " + Tasks.Joueurs[0].Points;
+            this.J1L.Text = Tasks.Joueurs[0].Laine.ToString();
+            this.J1B.Text = Tasks.Joueurs[0].Bois.ToString();
+            this.J1P.Text = Tasks.Joueurs[0].Pierre.ToString();
+            this.J1C.Text = Tasks.Joueurs[0].Cuivre.ToString();
+            this.J1H.Text = Tasks.Joueurs[0].HuttesDisponibles.ToString();
+            this.J1T.Text = Tasks.Joueurs[0].TemplesDisponibles.ToString();
+
+            this.J2PDV.Text = "Point de victoire: " + Tasks.Joueurs[1].Points;
+            this.J2L.Text = Tasks.Joueurs[1].Laine.ToString();
+            this.J2B.Text = Tasks.Joueurs[1].Bois.ToString();
+            this.J2P.Text = Tasks.Joueurs[1].Pierre.ToString();
+            this.J2C.Text = Tasks.Joueurs[1].Cuivre.ToString();
+            this.J2H.Text = Tasks.Joueurs[1].HuttesDisponibles.ToString();
+            this.J2T.Text = Tasks.Joueurs[1].TemplesDisponibles.ToString();
+
+            this.J3PDV.Text = "Point de victoire: " + Tasks.Joueurs[2].Points;
+            this.J3L.Text = Tasks.Joueurs[2].Laine.ToString();
+            this.J3B.Text = Tasks.Joueurs[2].Bois.ToString();
+            this.J3P.Text = Tasks.Joueurs[2].Pierre.ToString();
+            this.J3C.Text = Tasks.Joueurs[2].Cuivre.ToString();
+            this.J3H.Text = Tasks.Joueurs[2].HuttesDisponibles.ToString();
+            this.J3T.Text = Tasks.Joueurs[2].TemplesDisponibles.ToString();
+
         }
 
     }

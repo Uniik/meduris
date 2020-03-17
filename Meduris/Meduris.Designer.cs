@@ -35,54 +35,54 @@ namespace Meduris
             this.p1Panel = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.J1H = new System.Windows.Forms.Label();
+            this.J1T = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.J1C = new System.Windows.Forms.Label();
+            this.J1P = new System.Windows.Forms.Label();
+            this.J1B = new System.Windows.Forms.Label();
+            this.J1L = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.J1PDV = new System.Windows.Forms.Label();
             this.Player1Name = new System.Windows.Forms.Label();
             this.p2Panel = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.J2H = new System.Windows.Forms.Label();
+            this.J2T = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.J2C = new System.Windows.Forms.Label();
+            this.J2P = new System.Windows.Forms.Label();
+            this.J2B = new System.Windows.Forms.Label();
+            this.J2L = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.J2PDV = new System.Windows.Forms.Label();
             this.Player2Name = new System.Windows.Forms.Label();
             this.p3Panel = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.J3H = new System.Windows.Forms.Label();
+            this.J3T = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.J3C = new System.Windows.Forms.Label();
+            this.J3P = new System.Windows.Forms.Label();
+            this.J3B = new System.Windows.Forms.Label();
+            this.J3L = new System.Windows.Forms.Label();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.label31 = new System.Windows.Forms.Label();
+            this.J3PDV = new System.Windows.Forms.Label();
             this.Player3Name = new System.Windows.Forms.Label();
             this.scopePanel = new System.Windows.Forms.Panel();
             this.Logs = new System.Windows.Forms.RichTextBox();
@@ -125,20 +125,20 @@ namespace Meduris
             this.p1Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.p1Panel.Controls.Add(this.label13);
             this.p1Panel.Controls.Add(this.flowLayoutPanel1);
-            this.p1Panel.Controls.Add(this.label11);
-            this.p1Panel.Controls.Add(this.label10);
+            this.p1Panel.Controls.Add(this.J1H);
+            this.p1Panel.Controls.Add(this.J1T);
             this.p1Panel.Controls.Add(this.pictureBox7);
             this.p1Panel.Controls.Add(this.pictureBox6);
-            this.p1Panel.Controls.Add(this.label9);
-            this.p1Panel.Controls.Add(this.label8);
-            this.p1Panel.Controls.Add(this.label7);
-            this.p1Panel.Controls.Add(this.label4);
+            this.p1Panel.Controls.Add(this.J1C);
+            this.p1Panel.Controls.Add(this.J1P);
+            this.p1Panel.Controls.Add(this.J1B);
+            this.p1Panel.Controls.Add(this.J1L);
             this.p1Panel.Controls.Add(this.pictureBox4);
             this.p1Panel.Controls.Add(this.pictureBox3);
             this.p1Panel.Controls.Add(this.pictureBox2);
             this.p1Panel.Controls.Add(this.pictureBox1);
             this.p1Panel.Controls.Add(this.label6);
-            this.p1Panel.Controls.Add(this.label5);
+            this.p1Panel.Controls.Add(this.J1PDV);
             this.p1Panel.Controls.Add(this.Player1Name);
             resources.ApplyResources(this.p1Panel, "p1Panel");
             this.p1Panel.Name = "p1Panel";
@@ -157,19 +157,19 @@ namespace Meduris
             resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
-            // label11
+            // J1H
             // 
-            this.label11.BackColor = System.Drawing.Color.Silver;
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
+            this.J1H.BackColor = System.Drawing.Color.Silver;
+            this.J1H.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J1H, "J1H");
+            this.J1H.Name = "J1H";
             // 
-            // label10
+            // J1T
             // 
-            this.label10.BackColor = System.Drawing.Color.Silver;
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
+            this.J1T.BackColor = System.Drawing.Color.Silver;
+            this.J1T.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J1T, "J1T");
+            this.J1T.Name = "J1T";
             // 
             // pictureBox7
             // 
@@ -185,33 +185,33 @@ namespace Meduris
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             // 
-            // label9
+            // J1C
             // 
-            this.label9.BackColor = System.Drawing.Color.Silver;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
+            this.J1C.BackColor = System.Drawing.Color.Silver;
+            this.J1C.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J1C, "J1C");
+            this.J1C.Name = "J1C";
             // 
-            // label8
+            // J1P
             // 
-            this.label8.BackColor = System.Drawing.Color.Silver;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            this.J1P.BackColor = System.Drawing.Color.Silver;
+            this.J1P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J1P, "J1P");
+            this.J1P.Name = "J1P";
             // 
-            // label7
+            // J1B
             // 
-            this.label7.BackColor = System.Drawing.Color.Silver;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            this.J1B.BackColor = System.Drawing.Color.Silver;
+            this.J1B.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J1B, "J1B");
+            this.J1B.Name = "J1B";
             // 
-            // label4
+            // J1L
             // 
-            this.label4.BackColor = System.Drawing.Color.Silver;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            this.J1L.BackColor = System.Drawing.Color.Silver;
+            this.J1L.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J1L, "J1L");
+            this.J1L.Name = "J1L";
             // 
             // pictureBox4
             // 
@@ -248,12 +248,12 @@ namespace Meduris
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Name = "label6";
             // 
-            // label5
+            // J1PDV
             // 
-            this.label5.BackColor = System.Drawing.Color.Silver;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            this.J1PDV.BackColor = System.Drawing.Color.Silver;
+            this.J1PDV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J1PDV, "J1PDV");
+            this.J1PDV.Name = "J1PDV";
             // 
             // Player1Name
             // 
@@ -266,19 +266,19 @@ namespace Meduris
             this.p2Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.p2Panel.Controls.Add(this.label14);
             this.p2Panel.Controls.Add(this.flowLayoutPanel2);
-            this.p2Panel.Controls.Add(this.label16);
-            this.p2Panel.Controls.Add(this.label17);
+            this.p2Panel.Controls.Add(this.J2H);
+            this.p2Panel.Controls.Add(this.J2T);
             this.p2Panel.Controls.Add(this.pictureBox8);
             this.p2Panel.Controls.Add(this.pictureBox9);
-            this.p2Panel.Controls.Add(this.label18);
-            this.p2Panel.Controls.Add(this.label19);
-            this.p2Panel.Controls.Add(this.label20);
-            this.p2Panel.Controls.Add(this.label21);
+            this.p2Panel.Controls.Add(this.J2C);
+            this.p2Panel.Controls.Add(this.J2P);
+            this.p2Panel.Controls.Add(this.J2B);
+            this.p2Panel.Controls.Add(this.J2L);
             this.p2Panel.Controls.Add(this.pictureBox11);
             this.p2Panel.Controls.Add(this.pictureBox12);
             this.p2Panel.Controls.Add(this.pictureBox13);
             this.p2Panel.Controls.Add(this.pictureBox14);
-            this.p2Panel.Controls.Add(this.label22);
+            this.p2Panel.Controls.Add(this.J2PDV);
             this.p2Panel.Controls.Add(this.Player2Name);
             resources.ApplyResources(this.p2Panel, "p2Panel");
             this.p2Panel.Name = "p2Panel";
@@ -297,19 +297,19 @@ namespace Meduris
             resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             // 
-            // label16
+            // J2H
             // 
-            this.label16.BackColor = System.Drawing.Color.Silver;
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
+            this.J2H.BackColor = System.Drawing.Color.Silver;
+            this.J2H.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J2H, "J2H");
+            this.J2H.Name = "J2H";
             // 
-            // label17
+            // J2T
             // 
-            this.label17.BackColor = System.Drawing.Color.Silver;
-            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
+            this.J2T.BackColor = System.Drawing.Color.Silver;
+            this.J2T.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J2T, "J2T");
+            this.J2T.Name = "J2T";
             // 
             // pictureBox8
             // 
@@ -325,33 +325,33 @@ namespace Meduris
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
             // 
-            // label18
+            // J2C
             // 
-            this.label18.BackColor = System.Drawing.Color.Silver;
-            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
+            this.J2C.BackColor = System.Drawing.Color.Silver;
+            this.J2C.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J2C, "J2C");
+            this.J2C.Name = "J2C";
             // 
-            // label19
+            // J2P
             // 
-            this.label19.BackColor = System.Drawing.Color.Silver;
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.Name = "label19";
+            this.J2P.BackColor = System.Drawing.Color.Silver;
+            this.J2P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J2P, "J2P");
+            this.J2P.Name = "J2P";
             // 
-            // label20
+            // J2B
             // 
-            this.label20.BackColor = System.Drawing.Color.Silver;
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
+            this.J2B.BackColor = System.Drawing.Color.Silver;
+            this.J2B.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J2B, "J2B");
+            this.J2B.Name = "J2B";
             // 
-            // label21
+            // J2L
             // 
-            this.label21.BackColor = System.Drawing.Color.Silver;
-            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.Name = "label21";
+            this.J2L.BackColor = System.Drawing.Color.Silver;
+            this.J2L.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J2L, "J2L");
+            this.J2L.Name = "J2L";
             // 
             // pictureBox11
             // 
@@ -381,12 +381,12 @@ namespace Meduris
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.TabStop = false;
             // 
-            // label22
+            // J2PDV
             // 
-            this.label22.BackColor = System.Drawing.Color.Silver;
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.Name = "label22";
+            this.J2PDV.BackColor = System.Drawing.Color.Silver;
+            this.J2PDV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J2PDV, "J2PDV");
+            this.J2PDV.Name = "J2PDV";
             // 
             // Player2Name
             // 
@@ -399,19 +399,19 @@ namespace Meduris
             this.p3Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.p3Panel.Controls.Add(this.label23);
             this.p3Panel.Controls.Add(this.flowLayoutPanel3);
-            this.p3Panel.Controls.Add(this.label25);
-            this.p3Panel.Controls.Add(this.label26);
+            this.p3Panel.Controls.Add(this.J3H);
+            this.p3Panel.Controls.Add(this.J3T);
             this.p3Panel.Controls.Add(this.pictureBox15);
             this.p3Panel.Controls.Add(this.pictureBox16);
-            this.p3Panel.Controls.Add(this.label27);
-            this.p3Panel.Controls.Add(this.label28);
-            this.p3Panel.Controls.Add(this.label29);
-            this.p3Panel.Controls.Add(this.label30);
+            this.p3Panel.Controls.Add(this.J3C);
+            this.p3Panel.Controls.Add(this.J3P);
+            this.p3Panel.Controls.Add(this.J3B);
+            this.p3Panel.Controls.Add(this.J3L);
             this.p3Panel.Controls.Add(this.pictureBox18);
             this.p3Panel.Controls.Add(this.pictureBox19);
             this.p3Panel.Controls.Add(this.pictureBox20);
             this.p3Panel.Controls.Add(this.pictureBox21);
-            this.p3Panel.Controls.Add(this.label31);
+            this.p3Panel.Controls.Add(this.J3PDV);
             this.p3Panel.Controls.Add(this.Player3Name);
             resources.ApplyResources(this.p3Panel, "p3Panel");
             this.p3Panel.Name = "p3Panel";
@@ -430,19 +430,19 @@ namespace Meduris
             resources.ApplyResources(this.flowLayoutPanel3, "flowLayoutPanel3");
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             // 
-            // label25
+            // J3H
             // 
-            this.label25.BackColor = System.Drawing.Color.Silver;
-            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
+            this.J3H.BackColor = System.Drawing.Color.Silver;
+            this.J3H.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J3H, "J3H");
+            this.J3H.Name = "J3H";
             // 
-            // label26
+            // J3T
             // 
-            this.label26.BackColor = System.Drawing.Color.Silver;
-            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.Name = "label26";
+            this.J3T.BackColor = System.Drawing.Color.Silver;
+            this.J3T.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J3T, "J3T");
+            this.J3T.Name = "J3T";
             // 
             // pictureBox15
             // 
@@ -458,33 +458,33 @@ namespace Meduris
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.TabStop = false;
             // 
-            // label27
+            // J3C
             // 
-            this.label27.BackColor = System.Drawing.Color.Silver;
-            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label27, "label27");
-            this.label27.Name = "label27";
+            this.J3C.BackColor = System.Drawing.Color.Silver;
+            this.J3C.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J3C, "J3C");
+            this.J3C.Name = "J3C";
             // 
-            // label28
+            // J3P
             // 
-            this.label28.BackColor = System.Drawing.Color.Silver;
-            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label28, "label28");
-            this.label28.Name = "label28";
+            this.J3P.BackColor = System.Drawing.Color.Silver;
+            this.J3P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J3P, "J3P");
+            this.J3P.Name = "J3P";
             // 
-            // label29
+            // J3B
             // 
-            this.label29.BackColor = System.Drawing.Color.Silver;
-            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.Name = "label29";
+            this.J3B.BackColor = System.Drawing.Color.Silver;
+            this.J3B.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J3B, "J3B");
+            this.J3B.Name = "J3B";
             // 
-            // label30
+            // J3L
             // 
-            this.label30.BackColor = System.Drawing.Color.Silver;
-            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.Name = "label30";
+            this.J3L.BackColor = System.Drawing.Color.Silver;
+            this.J3L.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J3L, "J3L");
+            this.J3L.Name = "J3L";
             // 
             // pictureBox18
             // 
@@ -514,12 +514,12 @@ namespace Meduris
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.TabStop = false;
             // 
-            // label31
+            // J3PDV
             // 
-            this.label31.BackColor = System.Drawing.Color.Silver;
-            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.Name = "label31";
+            this.J3PDV.BackColor = System.Drawing.Color.Silver;
+            this.J3PDV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.J3PDV, "J3PDV");
+            this.J3PDV.Name = "J3PDV";
             // 
             // Player3Name
             // 
@@ -591,52 +591,52 @@ namespace Meduris
         private System.Windows.Forms.Label Player1Name;
         private System.Windows.Forms.Label Player2Name;
         private System.Windows.Forms.Label Player3Name;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label J1PDV;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label J1C;
+        private System.Windows.Forms.Label J1P;
+        private System.Windows.Forms.Label J1B;
+        private System.Windows.Forms.Label J1L;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label J1H;
+        private System.Windows.Forms.Label J1T;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label J2H;
+        private System.Windows.Forms.Label J2T;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label J2C;
+        private System.Windows.Forms.Label J2P;
+        private System.Windows.Forms.Label J2B;
+        private System.Windows.Forms.Label J2L;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label J2PDV;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label J3H;
+        private System.Windows.Forms.Label J3T;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label J3C;
+        private System.Windows.Forms.Label J3P;
+        private System.Windows.Forms.Label J3B;
+        private System.Windows.Forms.Label J3L;
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label J3PDV;
         private System.Windows.Forms.Panel scopePanel;
         private System.Windows.Forms.RichTextBox Logs;
     }
