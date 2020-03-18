@@ -38,9 +38,10 @@
             // label
             // 
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(75, 40);
+            this.label.Location = new System.Drawing.Point(19, 40);
+            this.label.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(429, 24);
+            this.label.Size = new System.Drawing.Size(536, 24);
             this.label.TabIndex = 0;
             this.label.Text = "Choisissez la ressource à ";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

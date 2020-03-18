@@ -53,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Case.cs" />
+    <Compile Include="ChoixOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoixOption.Designer.cs">
+      <DependentUpon>ChoixOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChoixRessource.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="ChoixOption.resx">
+      <DependentUpon>ChoixOption.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChoixRessource.resx">
       <DependentUpon>ChoixRessource.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,8 +127,11 @@
     <None Include="Ressource\whiteBackground.png" />
     <None Include="Ressource\BoisICO.png" />
     <None Include="Ressource\CuivreICO.png" />
+    <None Include="Ressource\construire__hutte.png" />
+    <None Include="Ressource\construire__temple.png" />
     <Content Include="Ressource\druide_large.gif" />
     <Content Include="Ressource\druide_normal.gif" />
+    <None Include="Ressource\grande_exploitation.png" />
     <Content Include="Ressource\hutte_bleu.gif" />
     <Content Include="Ressource\hutte_jaune.gif" />
     <Content Include="Ressource\hutte_rouge.gif" />

@@ -12,8 +12,10 @@ namespace Meduris
     {
         static private Meduris mainWindow;
         static private Menu menu;
+        static private ChoixOption choixOption;
         static private bool initOuvrier = true;
         static private int compteurOuvrier = 0;
+        static private int tour = 0;
         static private Joueur[] joueurs;
         static private Color[] couleursJoueurs = new Color[]
         {
@@ -47,7 +49,6 @@ namespace Meduris
         {
             if (compteurOuvrier < 6)
             {
-                Console.WriteLine("compteur : " + compteurOuvrier);
                 Joueur j;
                 String s; //premier ou deuxieme
 
@@ -62,10 +63,10 @@ namespace Meduris
                     s = "second";
                 }
 
-                mainWindow.addLog(j.Nom + ", Placez votre " +s +" ouvrier", couleursJoueurs[Array.IndexOf(joueurs, j)]);
+                mainWindow.addLog(j.Nom + ", Placez votre " + s + " ouvrier", couleursJoueurs[Array.IndexOf(joueurs, j)]);
                 mainWindow.PoserOuvrier = true;
                 mainWindow.SelectedPlayer = j;
-                compteurOuvrier ++;
+                compteurOuvrier++;
             }
             else
             {
@@ -76,6 +77,8 @@ namespace Meduris
 
         public static void tourpart1()
         {
+            tour++;
+            mainWindow.Refresh();
             Random r = new Random();
             mainWindow.addLog("Début du tour:");
             System.Threading.Thread.Sleep(1000);
@@ -85,7 +88,7 @@ namespace Meduris
                 case 1:  //chaques joueur doivent délaisser une ressource
                     mainWindow.addLog("Attention: vous devrez choisir une ressource à délaisser.");
                     System.Threading.Thread.Sleep(2000);
-                    new ChoixRessource(false).Show();               
+                    new ChoixRessource(false).Show();
                     break;
                 case 2:
                     mainWindow.addLog("Attention: vous devrez choisir une ressource à produire.");
@@ -101,81 +104,207 @@ namespace Meduris
         }
         public static void tourpart2()
         {
-
+            mainWindow.Refresh();
+            mainWindow.addLog("Attention: vous devrez choisir une action à éffectuer.");
+            System.Threading.Thread.Sleep(2000);
+            choixOption = new ChoixOption();
+            choixOption.Show();
         }
 
-        public static void delaisserMP(Joueur j, int ID)
+        /// <summary>
+        /// délaisse une matière première et rafraichit les stats dans l'interface
+        /// </summary>
+        /// <param name="j"></param>
+        /// <param name="ID"></param>
+        /// <param name="quantite"></param>
+        public static void delaisserMP(Joueur j, int ID, int quantite)
         {
             switch (ID)
             {
                 case 0:
-                    j.Laine--;
+                    j.Laine -= quantite;
                     break;
                 case 1:
-                    j.Bois--;
+                    j.Bois -= quantite;
                     break;
                 case 2:
-                    j.Pierre--;
+                    j.Pierre -= quantite;
                     break;
                 case 3:
-                    j.Cuivre--;
+                    j.Cuivre -= quantite;
+                    break;
+            }
+            mainWindow.refreshStats();
+        }
+        /// <summary>
+        /// produit une matière première et rafraichit les stats dans l'interface
+        /// </summary>
+        /// <param name="j"></param>
+        /// <param name="ID"></param>
+        /// <param name="quantite"></param>
+        public static void produireMP(Joueur j, int ID, int quantite)
+        {
+            switch (ID)
+            {
+                case 0:
+                    j.Laine += quantite;
+                    break;
+                case 1:
+                    j.Bois += quantite;
+                    break;
+                case 2:
+                    j.Pierre += quantite;
+                    break;
+                case 3:
+                    j.Cuivre += quantite;
                     break;
             }
             mainWindow.refreshStats();
         }
 
-        public static void produireMP(Joueur j, int ID)
+        /// <summary>
+        /// Le joueurs produit des matières premières
+        /// selon la position de leur ouvriers
+        /// </summary>
+        /// <param name="j"></param>
+        public static void grandeExploitation(Joueur j)
         {
-            switch (ID)
+            foreach (HautPlateau hp in mainWindow.HautPlateaux)
             {
-                case 0:
-                    j.Laine++;
-                    break;
-                case 1:
-                    j.Bois++;
-                    break;
-                case 2:
-                    j.Pierre++;
-                    break;
-                case 3:
-                    j.Cuivre++;
-                    break;
-            }
-            mainWindow.refreshStats();
-        }
-        private static void produireMPparOuvrier()
-        {
-            foreach(HautPlateau hp in mainWindow.HautPlateaux)
-            {
-                foreach(Ouvrier o in hp.Ouvriers)
+                foreach (Ouvrier o in hp.Ouvriers)
                 {
-                    produireMP(o.Joueur, hp.TypeID);
+                    if (o.Joueur == j)
+                    {
+                        produireMP(j, hp.TypeID, hp.Ouvriers.IndexOf(o) + 1);
+                    }
                 }
             }
-            
+            choixOption.refresh();
+        }
+        /// <summary>
+        /// produit une matière première par ouvrier
+        /// </summary>
+        private static void produireMPparOuvrier()
+        {
+            foreach (HautPlateau hp in mainWindow.HautPlateaux)
+            {
+                foreach (Ouvrier o in hp.Ouvriers)
+                {
+                    produireMP(o.Joueur, hp.TypeID, 1);
+                }
+            }
+            tourpart2();
+
+        }
+
+        public static void achatHutte(Joueur j)
+        {
+            mainWindow.SelectedPlayer = j;
+            mainWindow.PoserHutte = true;
+            mainWindow.addLog(j.Nom + ", Cliquez sur la case voulue", couleursJoueurs[Array.IndexOf(joueurs, j)]);
+        }
+
+        public static bool acheterHutte(Joueur j, Case c)
+        {
+            int compteur = 1;
+            int position = Array.IndexOf(Meduris.cases, c);
+            bool pasDeHutte = false;
+            Case voisin;
+            c.resetCost();
+
+            while (!pasDeHutte)
+            {
+                if(position-compteur < 0)
+                {
+                    voisin = Meduris.cases[Meduris.cases.Length - compteur];
+                }
+                else
+                {
+                    voisin = Meduris.cases[position - compteur];
+                }
+                if(voisin.TypeID == 1)
+                {
+                    c.augmenterCout();
+                    compteur++;
+                }
+                else
+                {
+                    pasDeHutte = true;
+                }
+            }
+
+
+            compteur = 1;
+            pasDeHutte = false;
+
+            while (!pasDeHutte)
+            {
+                if (position + compteur >= Meduris.cases.Length)
+                {
+                    voisin = Meduris.cases[-1+compteur];
+                }
+                else
+                {
+                    voisin = Meduris.cases[position + compteur];
+                }
+                if (voisin.TypeID == 1)
+                {
+                    c.augmenterCout();
+                    compteur++;
+                }
+                else
+                {
+                    pasDeHutte = true;
+                }
+            }
+
+            //vérifie si le joueur a les fonds suffisant
+            if (j.Laine >= c.CoutLaine && j.Bois >= c.CoutBois && j.Pierre >= c.CoutPierre && j.Cuivre >= c.CoutCuivre)
+            {
+
+                mainWindow.addLog(j.Nom + ", Vous venez d'acheter une Hutte pour " + c.getCost(), couleursJoueurs[Array.IndexOf(joueurs, j)]);
+                j.Laine -= c.CoutLaine;
+                j.Bois -= c.CoutBois;
+                j.Pierre -= c.CoutPierre;
+                j.Cuivre -= c.CoutCuivre;
+                j.HuttesDisponibles--;
+                c.TypeID = 1;
+                c.Proprietaire = j;
+                mainWindow.refreshStats();
+                choixOption.refresh();
+                return true;
+
+
+            }
+            else
+            {
+                mainWindow.addLog(j.Nom + ", Vous n'avez pas les ressources nécessaires: " + c.getCost(), couleursJoueurs[Array.IndexOf(joueurs, j)]);
+                return false;
+            }
         }
 
         static private Timer timer1;
 
-        public static Joueur[] Joueurs { get => joueurs; set => joueurs = value; }
-        public static int CompteurOuvrier { get => compteurOuvrier; set => compteurOuvrier = value; }
-        public static bool InitOuvrier { get => initOuvrier; set => initOuvrier = value; }
+public static Joueur[] Joueurs { get => joueurs; set => joueurs = value; }
+public static int CompteurOuvrier { get => compteurOuvrier; set => compteurOuvrier = value; }
+public static bool InitOuvrier { get => initOuvrier; set => initOuvrier = value; }
+public static int Tour { get => tour; set => tour = value; }
 
-        static public void InitTimer()
-        {
-            timer1 = new Timer();
-            timer1.Tick += new EventHandler(timer1_Tick);
-            timer1.Interval = 25; // in miliseconds
-            timer1.Start();
-        }
+static public void InitTimer()
+{
+    timer1 = new Timer();
+    timer1.Tick += new EventHandler(timer1_Tick);
+    timer1.Interval = 25; // in miliseconds
+    timer1.Start();
+}
 
-        private static void timer1_Tick(object sender, EventArgs e)
-        {
-            if (mainWindow.MouseOverPlateau)
-            {
-                mainWindow.scope();
-            }
-        }
+private static void timer1_Tick(object sender, EventArgs e)
+{
+    if (mainWindow.MouseOverPlateau)
+    {
+        mainWindow.scope();
+    }
+}
 
 
     }

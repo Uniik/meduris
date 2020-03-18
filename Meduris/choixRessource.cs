@@ -16,6 +16,9 @@ namespace Meduris
         private int compteur = 0;
         private string s;
         private bool ajouter; //délaisse une ressource si false
+
+        public int Compteur { get => compteur; set => compteur = value; }
+
         public ChoixRessource(bool ajouter)
         {
             if (compteur < 3)
@@ -51,33 +54,45 @@ namespace Meduris
 
         private void laineBtn_Click(object sender, EventArgs e)
         {
-            ressourceChoisie(0);
+            if (j.Laine > 0 || ajouter)//empeche que le joueur aie -1 ressource
+            {
+                ressourceChoisie(0);
+            }
         }
 
         private void BoisBtn_Click(object sender, EventArgs e)
         {
-            ressourceChoisie(1);
+            if (j.Bois > 0 || ajouter)
+            {
+                ressourceChoisie(1);
+            }
         }
 
         private void pierreBtn_Click(object sender, EventArgs e)
         {
-            ressourceChoisie(2);
+            if (j.Pierre > 0 || ajouter)
+            {
+                ressourceChoisie(2);
+            }
         }
 
         private void CuivreBtn_Click(object sender, EventArgs e)
         {
-            ressourceChoisie(3);
+            if (j.Cuivre > 0 || ajouter)
+            {
+                ressourceChoisie(3);
+            }
         }
 
         private void ressourceChoisie(int ressourceID)
         {
             if (ajouter)
             {
-                Tasks.produireMP(j, ressourceID);
+                Tasks.produireMP(j, ressourceID, 1);
             }
             else
             {
-                Tasks.delaisserMP(j, ressourceID);
+                Tasks.delaisserMP(j, ressourceID, 1);
             }
             refresh();
         }

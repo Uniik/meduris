@@ -19,18 +19,52 @@ namespace Meduris
         private Joueur selectedPlayer;
         private Graphics gr;
         private bool poserOuvrier = false;
+        private bool poserHutte = false;
         private bool mouseOverPlateau = false;
         readonly Color defaultLogColor = Color.Black;
         readonly Point centre = new Point(539, 527);
-        readonly Case[] cases = new Case[]
-        { new Case (new Point(135, 268)), new Case (new Point(192, 209)), new Case (new Point(256, 153)), new Case (new Point(329, 116)),
-            new Case (new Point(407, 88)), new Case (new Point(512, 82)), new Case (new Point(590, 97)), new Case (new Point(676, 116)),
-            new Case (new Point(769, 130)), new Case (new Point(847, 154)), new Case (new Point(897, 218)), new Case (new Point(934, 289)),
-            new Case (new Point(954, 384)), new Case (new Point(978, 472)), new Case (new Point(986, 575)), new Case (new Point(952, 657)),
-            new Case (new Point(915, 731)), new Case (new Point(878, 814)), new Case (new Point(837, 882)), new Case (new Point(764, 919)),
-            new Case (new Point(687, 943)), new Case (new Point(604, 963)), new Case (new Point(493, 950)), new Case (new Point(409, 930)),
-            new Case (new Point(321, 901)), new Case (new Point(243, 853)), new Case (new Point(196, 787)), new Case (new Point(130, 729)),
-            new Case (new Point(84, 650)), new Case (new Point(74, 552)), new Case (new Point(77, 465)), new Case (new Point(95, 374)) };
+        static public readonly Case[] cases = new Case[]
+        { new Case (new Point(135, 268), 0, Case.Ressource.Laine, Case.Ressource.cuivre),
+            new Case (new Point(192, 209), 0, Case.Ressource.pierre, Case.Ressource.bois),
+            new Case (new Point(256, 153), 0, Case.Ressource.Laine, Case.Ressource.cuivre),
+            new Case (new Point(329, 116), 0, Case.Ressource.bois, Case.Ressource.cuivre),
+            new Case (new Point(407, 88), 0, Case.Ressource.pierre, Case.Ressource.bois),
+
+            new Case (new Point(512, 82), 1, Case.Ressource.bois, Case.Ressource.Laine),
+            new Case (new Point(590, 97), 1, Case.Ressource.cuivre, Case.Ressource.Laine),
+            new Case (new Point(676, 116), 1, Case.Ressource.bois, Case.Ressource.pierre),
+
+            new Case (new Point(769, 130), 2, Case.Ressource.pierre, Case.Ressource.cuivre),
+            new Case (new Point(847, 154), 2, Case.Ressource.Laine, Case.Ressource.pierre),
+            new Case (new Point(897, 218), 2, Case.Ressource.cuivre, Case.Ressource.bois),
+            new Case (new Point(934, 289), 2, Case.Ressource.cuivre, Case.Ressource.Laine),
+
+            new Case (new Point(954, 384), 3, Case.Ressource.pierre, Case.Ressource.cuivre),
+            new Case (new Point(978, 472), 3, Case.Ressource.Laine, Case.Ressource.bois),
+
+            new Case (new Point(986, 575), 4, Case.Ressource.bois, Case.Ressource.cuivre),
+            new Case (new Point(952, 657), 4, Case.Ressource.pierre, Case.Ressource.cuivre),
+            new Case (new Point(915, 731), 4, Case.Ressource.bois, Case.Ressource.Laine),
+
+            new Case (new Point(878, 814), 5, Case.Ressource.pierre, Case.Ressource.Laine),
+            new Case (new Point(837, 882), 5, Case.Ressource.pierre, Case.Ressource.bois),
+            new Case (new Point(764, 919), 5, Case.Ressource.Laine, Case.Ressource.cuivre),
+            new Case (new Point(687, 943), 5, Case.Ressource.bois, Case.Ressource.pierre), 
+            new Case (new Point(604, 963), 5, Case.Ressource.Laine, Case.Ressource.pierre),
+
+            new Case (new Point(493, 950), 6, Case.Ressource.bois, Case.Ressource.cuivre),
+            new Case (new Point(409, 930), 6, Case.Ressource.bois, Case.Ressource.Laine),
+            new Case (new Point(321, 901), 6, Case.Ressource.cuivre, Case.Ressource.pierre),
+
+            new Case (new Point(243, 853), 7, Case.Ressource.bois, Case.Ressource.pierre),
+            new Case (new Point(196, 787), 7, Case.Ressource.Laine, Case.Ressource.bois),
+            new Case (new Point(130, 729), 7, Case.Ressource.cuivre, Case.Ressource.Laine),
+            new Case (new Point(84, 650), 7, Case.Ressource.cuivre, Case.Ressource.bois),
+
+            new Case (new Point(74, 552), 8, Case.Ressource.Laine, Case.Ressource.pierre),
+            new Case (new Point(77, 465), 8, Case.Ressource.pierre, Case.Ressource.cuivre),
+            new Case (new Point(95, 374), 8, Case.Ressource.Laine, Case.Ressource.pierre) };
+
         readonly HautPlateau[] hautPlateaux = new HautPlateau[]
         {
             new HautPlateau(new Point(670, 440), HautPlateau.Type.laine),
@@ -44,6 +78,8 @@ namespace Meduris
         public Joueur SelectedPlayer { get => selectedPlayer; set => selectedPlayer = value; }
 
         public HautPlateau[] HautPlateaux => hautPlateaux;
+
+        public bool PoserHutte { get => poserHutte; set => poserHutte = value; }
 
         public Meduris(Joueur[] joueurs)
         {
@@ -96,11 +132,11 @@ namespace Meduris
         private void plateau_Click(object sender, EventArgs e)
         {
             Point newPoint = new Point(Cursor.Position.X, Cursor.Position.Y);
-            Point ClickedCase = null;
+            Point ClickedCasePoint = null;
             Point ClickedHautPlateauPoint = null;
             HautPlateau ClickedHautPlateau = null;
 
-            //ClickedCase = trouverPoint(newPoint, cases);
+            ClickedCasePoint = trouverPoint(newPoint, cases);
             ClickedHautPlateauPoint = trouverPoint(newPoint, hautPlateaux);
 
             if (ClickedHautPlateauPoint != null)
@@ -130,10 +166,25 @@ namespace Meduris
                     }
 
                 }
+                
             }
 
-            if (ClickedCase != null)
+            if (ClickedCasePoint != null)
             {
+                if (poserHutte)
+                {
+                    foreach (Case c in cases)
+                    {
+                        if (c.Point == ClickedCasePoint)
+                        {
+                            if (Tasks.acheterHutte(selectedPlayer, c))
+                            {
+                                addPic(ClickedCasePoint, c.initImage(selectedPlayer));
+                                poserHutte = false;
+                            }
+                        }
+                    }
+                }
             }
 
             Console.WriteLine("X: " + Cursor.Position.X + "y: " + Cursor.Position.Y);
@@ -251,7 +302,20 @@ namespace Meduris
             this.J3H.Text = Tasks.Joueurs[2].HuttesDisponibles.ToString();
             this.J3T.Text = Tasks.Joueurs[2].TemplesDisponibles.ToString();
 
+            this.CompteurTour.Text = "Tour: " + Tasks.Tour;
+
         }
 
+        private void AfficherLoupeCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.AfficherLoupeCB.Checked)
+            {
+                this.scopePanel.Visible = true;
+            }
+            else
+            {
+                this.scopePanel.Visible = false;
+            }
+        }
     }
 }

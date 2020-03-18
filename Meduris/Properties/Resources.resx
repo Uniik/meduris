@@ -124,8 +124,11 @@
   <data name="laineICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Ressource\laineICO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hutte_rouge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Ressource\hutte_rouge.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="whiteBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Ressource\whiteBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druide_normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Ressource\druide_normal.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="meeple_bleu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Ressource\meeple_bleu.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,9 +151,6 @@
   <data name="hutte_vert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Ressource\hutte_vert.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="druide_normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Ressource\druide_normal.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="temple_vert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Ressource\temple_vert.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,16 +160,25 @@
   <data name="PierreICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Ressource\PierreICO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="temple_bleu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Ressource\temple_bleu.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="temple_rouge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Ressource\temple_rouge.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="meeple_vert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Ressource\meeple_vert.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="temple_bleu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Ressource\temple_bleu.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hutte_rouge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Ressource\hutte_rouge.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="whiteBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Ressource\whiteBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="construire__hutte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Ressource\construire__hutte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="construire__temple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Ressource\construire__temple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grande_exploitation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Ressource\grande_exploitation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

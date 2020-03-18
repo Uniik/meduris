@@ -86,6 +86,8 @@ namespace Meduris
             this.Player3Name = new System.Windows.Forms.Label();
             this.scopePanel = new System.Windows.Forms.Panel();
             this.Logs = new System.Windows.Forms.RichTextBox();
+            this.AfficherLoupeCB = new System.Windows.Forms.CheckBox();
+            this.CompteurTour = new System.Windows.Forms.Label();
             this.p1Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -539,11 +541,32 @@ namespace Meduris
             this.Logs.Name = "Logs";
             this.Logs.ReadOnly = true;
             // 
+            // AfficherLoupeCB
+            // 
+            resources.ApplyResources(this.AfficherLoupeCB, "AfficherLoupeCB");
+            this.AfficherLoupeCB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.AfficherLoupeCB.Checked = true;
+            this.AfficherLoupeCB.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AfficherLoupeCB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AfficherLoupeCB.Name = "AfficherLoupeCB";
+            this.AfficherLoupeCB.UseVisualStyleBackColor = false;
+            this.AfficherLoupeCB.CheckedChanged += new System.EventHandler(this.AfficherLoupeCB_CheckedChanged);
+            // 
+            // CompteurTour
+            // 
+            resources.ApplyResources(this.CompteurTour, "CompteurTour");
+            this.CompteurTour.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CompteurTour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.CompteurTour.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CompteurTour.Name = "CompteurTour";
+            // 
             // Meduris
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Meduris.Properties.Resources.background;
+            this.Controls.Add(this.CompteurTour);
+            this.Controls.Add(this.AfficherLoupeCB);
             this.Controls.Add(this.Logs);
             this.Controls.Add(this.scopePanel);
             this.Controls.Add(this.plateau);
@@ -579,6 +602,7 @@ namespace Meduris
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -639,6 +663,8 @@ namespace Meduris
         private System.Windows.Forms.Label J3PDV;
         private System.Windows.Forms.Panel scopePanel;
         private System.Windows.Forms.RichTextBox Logs;
+        private System.Windows.Forms.CheckBox AfficherLoupeCB;
+        private System.Windows.Forms.Label CompteurTour;
     }
 }
 

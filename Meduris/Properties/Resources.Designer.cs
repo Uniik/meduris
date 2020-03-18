@@ -83,6 +83,26 @@ namespace Meduris.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap construire__hutte {
+            get {
+                object obj = ResourceManager.GetObject("construire__hutte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap construire__temple {
+            get {
+                object obj = ResourceManager.GetObject("construire__temple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CuivreICO {
             get {
                 object obj = ResourceManager.GetObject("CuivreICO", resourceCulture);
@@ -96,6 +116,16 @@ namespace Meduris.Properties {
         internal static System.Drawing.Bitmap druide_normal {
             get {
                 object obj = ResourceManager.GetObject("druide_normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grande_exploitation {
+            get {
+                object obj = ResourceManager.GetObject("grande_exploitation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
