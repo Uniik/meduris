@@ -158,6 +158,8 @@ namespace Meduris
 
             if (ClickedHautPlateauPoint != null)
             {
+
+                //pour poser un ouvrier
                 if (poserOuvrier)
                 {
                     foreach(HautPlateau h in hautPlateaux)
@@ -193,6 +195,7 @@ namespace Meduris
 
             if (ClickedCasePoint != null)
             {
+                //pour poser une hutte
                 if (poserHutte)
                 {
                     foreach (Case c in cases)
@@ -207,7 +210,7 @@ namespace Meduris
                         }
                     }
                 }
-
+                //pour poser un temple
                 if (PoserTemple)
                 {
                     foreach (Case c in cases)
@@ -223,8 +226,6 @@ namespace Meduris
                     }
                 }
             }
-
-            Console.WriteLine("X: " + Cursor.Position.X + "y: " + Cursor.Position.Y);
         }
 
         /// <summary>
@@ -296,7 +297,6 @@ namespace Meduris
         //pour placer un nouvel ouvrier en haut de la pile
         private Point trouverPointOuvrier(HautPlateau h)
         {
-            Console.WriteLine(h.Ouvriers.Count);
             int distance = 30 + 50 * (h.Ouvriers.Count-1);
             double rapportHomothetie = (h.Point.getDistance(centre) + distance) / h.Point.getDistance(centre); // le druide sera à 50 pixel au dessus de la case
             double x = rapportHomothetie * (h.Point.X - centre.X) + centre.X;
@@ -363,13 +363,13 @@ namespace Meduris
         /// R/r* (x2-x1)+x1 = x3
         /// </summary>
         /// <param name="p"></param>
-        private void moveDruid(Point p)
-        {
-            double rapportHomothetie = (p.getDistance(centre) + 50) / p.getDistance(centre); // le druide sera à 50 pixel au dessus de la case
-            double x = rapportHomothetie * (p.X - centre.X) + centre.X;
-            double y = rapportHomothetie * (p.Y - centre.Y) + centre.Y;
-            //addPic(new Point(Convert.ToInt32(x), Convert.ToInt32(y)), global::Meduris.Properties.Resources.druide_normal, 60);
-        }
+        //private void moveDruid(Point p)
+        //{
+        //    double rapportHomothetie = (p.getDistance(centre) + 50) / p.getDistance(centre); // le druide sera à 50 pixel au dessus de la case
+        //    double x = rapportHomothetie * (p.X - centre.X) + centre.X;
+        //    double y = rapportHomothetie * (p.Y - centre.Y) + centre.Y;
+        //    //addPic(new Point(Convert.ToInt32(x), Convert.ToInt32(y)), global::Meduris.Properties.Resources.druide_normal, 60);
+        //}
 
         private void Plateau_MouseEnter(object sender, EventArgs e)
         {
