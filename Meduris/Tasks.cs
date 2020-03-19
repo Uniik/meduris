@@ -24,7 +24,7 @@ namespace Meduris
             Color.Green
 
         };
-        static private bool dernierTour = false;
+        //static private bool dernierTour = false;
 
         //ouvre le menu d'acceil
         public static void launch()
@@ -233,6 +233,7 @@ namespace Meduris
                 return false;
             }
 
+            //pour compter les huttes à gauche
             while (!pasDeHutte)
             {
                 if(position-compteur < 0)
@@ -258,6 +259,7 @@ namespace Meduris
             compteur = 1;
             pasDeHutte = false;
 
+            // pour compter les huttes à droite
             while (!pasDeHutte)
             {
                 if (position + compteur >= Meduris.cases.Length)
@@ -332,6 +334,7 @@ namespace Meduris
             }
         }
 
+        //retourne le hautplateau contenant l'ouvrier à qui appartient la PictureBox
         public static HautPlateau trouverAvecPB(PictureBox pb)
         {
             foreach(HautPlateau hp in mainWindow.HautPlateaux)
@@ -363,6 +366,7 @@ public static int Tour { get => tour; set => tour = value; }
     timer1.Start();
 }
 
+       //rafraichit la loupe tout les 25 ms
 private static void timer1_Tick(object sender, EventArgs e)
 {
     if (mainWindow.MouseOverPlateau)
