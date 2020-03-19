@@ -44,6 +44,13 @@ namespace Meduris
             Properties.Resources.hutte_rouge,
             Properties.Resources.hutte_vert
         };
+
+        public readonly static Image[] imagesTemple =
+        {
+            Properties.Resources.temple_bleu,
+            Properties.Resources.temple_rouge,
+            Properties.Resources.temple_vert
+        };
         public Case(Point p, int districtID,  Ressource r1, Ressource r2)
         {
             this.point = p;
@@ -62,6 +69,11 @@ namespace Meduris
             if(this.typeID == 1)
             {
                 image.Image = imagesHuttes[index];
+            }
+
+            if(this.typeID == 2)
+            {
+                image.Image = imagesTemple[index];
             }
 
             return this.image;

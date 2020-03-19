@@ -40,16 +40,44 @@ namespace Meduris
         private void GrandeExploitation_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Tasks.grandeExploitation(j);
+            Tasks.grandeExploitationPart1(j);
         }
 
         private void ConstruireHutte_Click(object sender, EventArgs e)
         {
             if(j.HuttesDisponibles > 0)
             {
-                this.Visible = false;
-                Tasks.achatHutte(j);
+                if (assezRessources())
+                {
+                    this.Visible = false;
+                    Tasks.achatHutte(j);
+                }
             }
+        }
+
+        private void ConstruireTemple_Click(object sender, EventArgs e)
+        {
+            if(j.TemplesDisponibles > 0)
+            {
+                if (assezRessources())
+                {
+                    this.Visible = false;
+                    Tasks.achatTemple(j);
+                }
+            }
+        }
+
+        private bool assezRessources()
+        {
+            int total;
+            if ((total = j.Laine + j.Bois + j.Pierre + j.Cuivre) > 1)
+            {
+                if(total != j.Laine && total != j.Bois && total != j.Pierre && total != j.Cuivre)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

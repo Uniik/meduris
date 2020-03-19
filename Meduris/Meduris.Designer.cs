@@ -88,6 +88,7 @@ namespace Meduris
             this.Logs = new System.Windows.Forms.RichTextBox();
             this.AfficherLoupeCB = new System.Windows.Forms.CheckBox();
             this.CompteurTour = new System.Windows.Forms.Label();
+            this.LeaveButton = new System.Windows.Forms.Button();
             this.p1Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -560,11 +561,21 @@ namespace Meduris
             this.CompteurTour.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.CompteurTour.Name = "CompteurTour";
             // 
+            // LeaveButton
+            // 
+            this.LeaveButton.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            resources.ApplyResources(this.LeaveButton, "LeaveButton");
+            this.LeaveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LeaveButton.Name = "LeaveButton";
+            this.LeaveButton.UseVisualStyleBackColor = false;
+            this.LeaveButton.Click += new System.EventHandler(this.LeaveButton_Click);
+            // 
             // Meduris
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Meduris.Properties.Resources.background;
+            this.Controls.Add(this.LeaveButton);
             this.Controls.Add(this.CompteurTour);
             this.Controls.Add(this.AfficherLoupeCB);
             this.Controls.Add(this.Logs);
@@ -665,6 +676,7 @@ namespace Meduris
         private System.Windows.Forms.RichTextBox Logs;
         private System.Windows.Forms.CheckBox AfficherLoupeCB;
         private System.Windows.Forms.Label CompteurTour;
+        private System.Windows.Forms.Button LeaveButton;
     }
 }
 

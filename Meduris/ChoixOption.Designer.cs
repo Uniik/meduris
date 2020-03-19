@@ -87,6 +87,7 @@
             this.ConstruireTemple.Text = "Construire un temple";
             this.ConstruireTemple.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ConstruireTemple.UseVisualStyleBackColor = true;
+            this.ConstruireTemple.Click += new System.EventHandler(this.ConstruireTemple_Click);
             // 
             // ChoixOption
             // 

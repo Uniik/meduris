@@ -167,7 +167,15 @@ namespace Meduris
         /// selon la position de leur ouvriers
         /// </summary>
         /// <param name="j"></param>
-        public static void grandeExploitation(Joueur j)
+        public static void grandeExploitationPart1(Joueur j)
+        {
+
+            mainWindow.addLog(j.Nom + ", Choisissez l'ouvrier à reprendre", couleursJoueurs[Array.IndexOf(joueurs, j)]);
+            mainWindow.SelectedPlayer = j;
+            mainWindow.ReprendreOuvrier = true;
+        }
+
+        public static void grandeExploitationPart2(Joueur j)
         {
             foreach (HautPlateau hp in mainWindow.HautPlateaux)
             {
@@ -204,6 +212,13 @@ namespace Meduris
             mainWindow.addLog(j.Nom + ", Cliquez sur la case voulue", couleursJoueurs[Array.IndexOf(joueurs, j)]);
         }
 
+        public static void achatTemple(Joueur j)
+        {
+            mainWindow.SelectedPlayer = j;
+            mainWindow.PoserTemple = true;
+            mainWindow.addLog(j.Nom + ", Cliquez sur la case voulue", couleursJoueurs[Array.IndexOf(joueurs, j)]);
+        }
+
         public static bool acheterHutte(Joueur j, Case c)
         {
             int compteur = 1;
@@ -211,6 +226,12 @@ namespace Meduris
             bool pasDeHutte = false;
             Case voisin;
             c.resetCost();
+
+            if(c.TypeID != 0)
+            {
+                mainWindow.addLog(j.Nom + ", cette case est déja occupé!", couleursJoueurs[Array.IndexOf(joueurs, j)]);
+                return false;
+            }
 
             while (!pasDeHutte)
             {
@@ -283,14 +304,58 @@ namespace Meduris
             }
         }
 
+        public static bool acheterTemple(Joueur j, Case c)
+        {
+            if(c.TypeID != 0)
+            {
+                return false;
+            }
+            if (j.Laine >= c.CoutLaine && j.Bois >= c.CoutBois && j.Pierre >= c.CoutPierre && j.Cuivre >= c.CoutCuivre)
+            {
+
+                mainWindow.addLog(j.Nom + ", Vous venez d'acheter un temple pour " + c.getCost(), couleursJoueurs[Array.IndexOf(joueurs, j)]);
+                j.Laine -= c.CoutLaine;
+                j.Bois -= c.CoutBois;
+                j.Pierre -= c.CoutPierre;
+                j.Cuivre -= c.CoutCuivre;
+                j.HuttesDisponibles--;
+                c.TypeID = 2;
+                c.Proprietaire = j;
+                mainWindow.refreshStats();
+                choixOption.refresh();
+                return true;
+            }
+            else
+            {
+                mainWindow.addLog(j.Nom + ", Vous n'avez pas les ressources nécessaires: " + c.getCost(), couleursJoueurs[Array.IndexOf(joueurs, j)]);
+                return false;
+            }
+        }
+
+        public static HautPlateau trouverAvecPB(PictureBox pb)
+        {
+            foreach(HautPlateau hp in mainWindow.HautPlateaux)
+            {
+                foreach(Ouvrier o in hp.Ouvriers)
+                {
+                    if(o.Image == pb)
+                    {
+                        return hp;
+                    }
+                }
+            }
+            return null;
+        }
+
         static private Timer timer1;
 
 public static Joueur[] Joueurs { get => joueurs; set => joueurs = value; }
 public static int CompteurOuvrier { get => compteurOuvrier; set => compteurOuvrier = value; }
 public static bool InitOuvrier { get => initOuvrier; set => initOuvrier = value; }
 public static int Tour { get => tour; set => tour = value; }
+        public static Color[] CouleursJoueurs { get => couleursJoueurs; set => couleursJoueurs = value; }
 
-static public void InitTimer()
+        static public void InitTimer()
 {
     timer1 = new Timer();
     timer1.Tick += new EventHandler(timer1_Tick);

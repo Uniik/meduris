@@ -30,6 +30,7 @@ namespace Meduris
             this.typeID = (int)type;
         }
 
+
         public bool ajouterOuvrier(Joueur joueur)
         {
             Ouvrier nouveau = new Ouvrier(joueur);

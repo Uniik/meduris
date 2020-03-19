@@ -15,11 +15,12 @@ namespace Meduris
     public partial class Meduris : Form
     {
         private Bitmap currentscope;
-        private Joueur[] joueurs;
         private Joueur selectedPlayer;
         private Graphics gr;
         private bool poserOuvrier = false;
         private bool poserHutte = false;
+        private bool poserTemple = false;
+        private bool reprendreOuvrier = false;
         private bool mouseOverPlateau = false;
         readonly Color defaultLogColor = Color.Black;
         readonly Point centre = new Point(539, 527);
@@ -80,15 +81,30 @@ namespace Meduris
         public HautPlateau[] HautPlateaux => hautPlateaux;
 
         public bool PoserHutte { get => poserHutte; set => poserHutte = value; }
+        public bool ReprendreOuvrier { get => reprendreOuvrier; set => reprendreOuvrier = value; }
+        public bool PoserTemple { get => poserTemple; set => poserTemple = value; }
 
         public Meduris(Joueur[] joueurs)
         {
-            this.joueurs = joueurs;
             InitializeComponent();
             this.Player1Name.Text = joueurs[0].Nom;
             this.Player2Name.Text = joueurs[1].Nom;
             this.Player3Name.Text = joueurs[2].Nom;
         }
+
+        /// <summary>
+        /// pour le double tampon, donc une meilleur fluidité
+        /// </summary>
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleParam = base.CreateParams;
+                handleParam.ExStyle |= 0x02000000;
+                return handleParam;
+            }
+        }
+
 
         public void addLog(string text, Color? couleur = null)
         {
@@ -108,7 +124,7 @@ namespace Meduris
             var endWidth = 300;
             var endHeight = 300;
 
-            var scaleFactor = 3; //perhaps get this value from a const, or an on screen slider
+            var scaleFactor = 3;
 
             var startWidth = endWidth / scaleFactor;
             var startHeight = endHeight / scaleFactor;
@@ -135,6 +151,7 @@ namespace Meduris
             Point ClickedCasePoint = null;
             Point ClickedHautPlateauPoint = null;
             HautPlateau ClickedHautPlateau = null;
+            bool OuvrierPosable = true;
 
             ClickedCasePoint = trouverPoint(newPoint, cases);
             ClickedHautPlateauPoint = trouverPoint(newPoint, hautPlateaux);
@@ -150,11 +167,12 @@ namespace Meduris
                             if (h.ajouterOuvrier(selectedPlayer))
                             {
                                 addPic(trouverPointOuvrier(h), h.Ouvriers.Last<Ouvrier>().Image);
+                                h.Ouvriers.Last<Ouvrier>().Image.Click += new System.EventHandler(this.OuvrierPB_Click);
                             }
                             else
                             {
                                 Tasks.CompteurOuvrier--;
-                                Console.WriteLine("erreur");
+                                OuvrierPosable = false;
                             }
                         }
                     }
@@ -163,6 +181,10 @@ namespace Meduris
                     if (Tasks.InitOuvrier)
                     {
                         Tasks.InitialiserOuvriers();
+                    }
+                    else if(OuvrierPosable)
+                    {
+                        Tasks.grandeExploitationPart2(selectedPlayer);
                     }
 
                 }
@@ -185,11 +207,93 @@ namespace Meduris
                         }
                     }
                 }
+
+                if (PoserTemple)
+                {
+                    foreach (Case c in cases)
+                    {
+                        if (c.Point == ClickedCasePoint)
+                        {
+                            if (Tasks.acheterTemple(selectedPlayer, c))
+                            {
+                                addPic(ClickedCasePoint, c.initImage(selectedPlayer));
+                                poserTemple = false;
+                            }
+                        }
+                    }
+                }
             }
 
             Console.WriteLine("X: " + Cursor.Position.X + "y: " + Cursor.Position.Y);
         }
 
+        /// <summary>
+        /// Si le joueur doit retirer un ouvrier, le premier ouvrié cliqué lui appartenant
+        /// est retiré du plateau
+        /// ensuite, le joueur peut placer un nouveau ouvrier
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OuvrierPB_Click(object sender, EventArgs e)
+        {
+            HautPlateau hp = Tasks.trouverAvecPB((PictureBox)sender);
+            Ouvrier ouvrier = null;
+            bool fin = false;
+            int index;
+            int distance = 30;
+            foreach(Ouvrier o in hp.Ouvriers)
+            {
+                if (o.Image == (PictureBox)sender)
+                {
+                    ouvrier = o;
+                }
+            }
+            index = hp.Ouvriers.IndexOf(ouvrier);
+            if (reprendreOuvrier && ouvrier.Joueur == selectedPlayer)
+            {
+                foreach(Ouvrier o in hp.Ouvriers)
+                {
+                    this.plateau.Controls.Remove(o.Image);
+                }
+
+                if(hp.Ouvriers.Count <= 1 || index > hp.Ouvriers.Count - 2)
+                {
+                    fin = true;
+                }
+
+                while(!fin)
+                {
+                    if(hp.Ouvriers[index + 1] != null)
+                    {
+                        hp.Ouvriers[index] = hp.Ouvriers[index + 1];
+                        if (index < hp.Ouvriers.Count - 2)
+                        {
+                            index++;
+                        }
+                        else
+                        {
+                            fin = true;
+                        }
+                    }
+                }
+                hp.Ouvriers.RemoveAt(hp.Ouvriers.Count - 1);
+                this.reprendreOuvrier = false;
+                this.poserOuvrier = true;
+                addLog(selectedPlayer.Nom + ", Placez votre ouvrier", Tasks.CouleursJoueurs[Array.IndexOf(Tasks.Joueurs, selectedPlayer)]);
+
+                foreach (Ouvrier o in hp.Ouvriers)
+                {
+                    double rapportHomothetie = (hp.Point.getDistance(centre) + distance) / hp.Point.getDistance(centre);
+                    double x = rapportHomothetie * (hp.Point.X - centre.X) + centre.X;
+                    double y = rapportHomothetie * (hp.Point.Y - centre.Y) + centre.Y;
+                    addPic(new Point(Convert.ToInt32(x), Convert.ToInt32(y)), o.Image);
+                    distance += 50;
+                }
+
+            }
+        }
+
+        //pour placer un nouvel ouvrier en haut de la pile
         private Point trouverPointOuvrier(HautPlateau h)
         {
             Console.WriteLine(h.Ouvriers.Count);
@@ -249,6 +353,7 @@ namespace Meduris
             float angle = (float)Math.Atan2(centre.Y - p.Y, centre.X - p.X) * (float)(180 / Math.PI) + 270;
             pb.Image = Utils.RotateImage(i, new PointF((float)i.Width / 2, (float)i.Width / 2), angle);
             this.plateau.Controls.Add(pb);
+            this.Refresh();
         }
 
         /// <summary>
@@ -316,6 +421,11 @@ namespace Meduris
             {
                 this.scopePanel.Visible = false;
             }
+        }
+
+        private void LeaveButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
